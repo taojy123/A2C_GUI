@@ -1,10 +1,13 @@
+#coding=utf8
 #Boa:Frame:Frame1
 
+# ============== 这里是软件的主要界面和逻辑设计 ===============
 import wx
 
 def create(parent):
     return Frame1(parent)
 
+# 定义所用到的所有的控件的id
 [wxID_FRAME1, wxID_FRAME1BUTTON1, wxID_FRAME1BUTTON2, wxID_FRAME1BUTTON3, 
  wxID_FRAME1BUTTON4, wxID_FRAME1CTESTBENCH_BTN, wxID_FRAME1CTESTBENCH_FILE, 
  wxID_FRAME1ENALBE_PIPELINING, wxID_FRAME1EXIT_BTN, wxID_FRAME1GO_BTN, 
@@ -24,7 +27,12 @@ def create(parent):
  wxID_FRAME1TEXTCTRL9, wxID_FRAME1WORK_BTN, wxID_FRAME1WORK_DIR, 
 ] = [wx.NewId() for _init_ctrls in range(53)]
 
+
+# 主窗口的类描述
 class Frame1(wx.Frame):
+
+    # 以下代码是界面设计器生成的 不可轻易改动
+
     def _init_coll_gridSizer4_Items(self, parent):
         # generated method, don't edit
 
@@ -62,9 +70,10 @@ class Frame1(wx.Frame):
     def _init_coll_notebook1_Pages(self, parent):
         # generated method, don't edit
 
-        parent.AddPage(imageId=-1, page=self.panel1, select=False,
+        parent.AddPage(imageId=-1, page=self.panel1, select=True,
               text=u'Config_Ctrl')
-        parent.AddPage(imageId=-1, page=self.panel2, select=True, text=u'Codes')
+        parent.AddPage(imageId=-1, page=self.panel2, select=False,
+              text=u'Codes')
         parent.AddPage(imageId=-1, page=self.panel3, select=False, text=u'RSL')
         parent.AddPage(imageId=-1, page=self.panel4, select=False, text=u'SIM')
 
@@ -91,7 +100,7 @@ class Frame1(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(634, 131), size=wx.Size(900, 700),
+              pos=wx.Point(148, 71), size=wx.Size(900, 700),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(884, 662))
         self.SetMinSize(wx.Size(580, 660))
@@ -233,21 +242,21 @@ class Frame1(wx.Frame):
 
         self.sama_btn = wx.Button(id=wxID_FRAME1SAMA_BTN,
               label=u'Optional SAMA FILE', name=u'sama_btn', parent=self.panel1,
-              pos=wx.Point(352, 168), size=wx.Size(120, 23), style=0)
+              pos=wx.Point(352, 168), size=wx.Size(136, 23), style=0)
         self.sama_btn.SetToolTipString(u'')
         self.sama_btn.Bind(wx.EVT_BUTTON, self.OnSama_btnButton,
               id=wxID_FRAME1SAMA_BTN)
 
         self.ctestbench_btn = wx.Button(id=wxID_FRAME1CTESTBENCH_BTN,
               label=u'C Testbench', name=u'ctestbench_btn', parent=self.panel1,
-              pos=wx.Point(352, 136), size=wx.Size(80, 23), style=0)
+              pos=wx.Point(352, 136), size=wx.Size(104, 23), style=0)
         self.ctestbench_btn.SetToolTipString(u'')
         self.ctestbench_btn.Bind(wx.EVT_BUTTON, self.OnCtestbench_btnButton,
               id=wxID_FRAME1CTESTBENCH_BTN)
 
         self.source_btn = wx.Button(id=wxID_FRAME1SOURCE_BTN,
               label=u'LLVM-linked source/cdfg.tcl', name=u'source_btn',
-              parent=self.panel1, pos=wx.Point(352, 104), size=wx.Size(152, 23),
+              parent=self.panel1, pos=wx.Point(352, 104), size=wx.Size(176, 23),
               style=0)
         self.source_btn.SetToolTipString(u'')
         self.source_btn.Bind(wx.EVT_BUTTON, self.OnSource_btnButton,
@@ -392,13 +401,12 @@ class Frame1(wx.Frame):
         self._init_sizers()
 
     def __init__(self, parent):
+        # 调用绘制界面方法
         self._init_ctrls(parent)
-        self.xref1 = []
-        self.xref2 = []
-        self.xref3 = []
 
 
     def set_selected(self, file_label):
+        # 因为有多个按钮式选择文件功能，所以把选择文件的操作单独写成一个函数
         path = wx.FileSelector("Open")
         if path:
             path = path.replace("\\", "/")
@@ -406,6 +414,7 @@ class Frame1(wx.Frame):
             file_label.SetLabel(filename)
             
     def OnWork_btnButton(self, event):
+        # 选择Work目录按钮，注意这里选择的是目录而不是文件
         dir = wx.DirSelector()
         dir = dir.replace("\\", "/")
         dirname = dir.split("/")[-1]
@@ -413,84 +422,104 @@ class Frame1(wx.Frame):
         event.Skip()
         
     def OnSama_btnButton(self, event):
+        # 选择文件
         self.set_selected(self.sama_file)
         event.Skip()
 
     def OnCtestbench_btnButton(self, event):
+        # 选择文件
         self.set_selected(self.ctestbench_file)
         event.Skip()
 
     def OnSource_btnButton(self, event):
+        # 选择文件
         self.set_selected(self.source_file)
         event.Skip()
 
     def OnHwsrc_btnButton(self, event):
+        # 选择文件
         self.set_selected(self.hwsrc_file)
         event.Skip()
 
 
     def OnLlvmbuid_btnButton(self, event):
+        # 选择文件
         self.set_selected(self.llvmbuid_file)
         event.Skip()
 
     def OnGo_btnButton(self, event):
+        # Go按钮 暂时没有功能
         event.Skip()
 
     def OnExit_btnButton(self, event):
+        # 退出按钮
         self.Destroy()
         event.Skip()
 
-    def OnButton1Button(self, event):
+
+    def set_list(self, listbox):
+        # Codes页面的Open按钮，因为三个按钮的逻辑类似，所以可以简化合并
         path = wx.FileSelector("Open")
+        # 读取文件
         lines = open(path).readlines()
-        self.listBox1.Clear()
+        # 清空原来的数据
+        listbox.Clear()
         for line in lines:
+            # 逐行将数据添加到列表中
             line = line.strip()
-            self.listBox1.Append(line)
+            listbox.Append(line)
+
+
+    def OnButton1Button(self, event):
+        # 第一个Open按钮
+        self.set_list(self.listBox1)
         event.Skip()
 
     def OnButton2Button(self, event):
-        path = wx.FileSelector("Open")
-        lines = open(path).readlines()
-        self.listBox2.Clear()
-        for line in lines:
-            line = line.strip()
-            self.listBox2.Append(line)
+        # 第二个Open按钮
+        self.set_list(self.listBox2)
         event.Skip()
 
     def OnButton3Button(self, event):
-        path = wx.FileSelector("Open")
-        lines = open(path).readlines()
-        self.listBox3.Clear()
-        for line in lines:
-            line = line.strip()
-            self.listBox3.Append(line)
+        # 第三个Open按钮
+        self.set_list(self.listBox3)
         event.Skip()
 
     def OnButton4Button(self, event):
+        # Xref Open 按钮
         self.xref1 = []
         self.xref2 = []
         self.xref3 = []
+        # xref1/2/3 用于存放对应的3列xref信息
         path = wx.FileSelector("Open")
         lines = open(path).readlines()
+        # 读取每一行
         for line in lines:
             line = line.strip()
+            # 把每行通过空格分成3个元素，分别对应第1、2、3列
             x1, x2, x3 = line.split()
+            # 把对应元素添加到列表中
             self.xref1.append(int(x1))
             self.xref2.append(int(x2))
             self.xref3.append(int(x3))
         event.Skip()
 
     def OnListBox1Listbox(self, event):
+        # 点击列表框1时触发
         self.listBox2.Select(-1)
         self.listBox3.Select(-1)
+        # 获取当前点击的是第几行
         select_num = self.listBox1.GetSelection()
+        # 查出改行代表的数字出现在xref1中的第几个位置
         index = self.xref1.index(select_num)
+        # xref2中对应这个位置的数字便是xref2应该显示的行号
         self.listBox2.Select(self.xref2[index])
+        # 同上
         self.listBox3.Select(self.xref3[index])
         event.Skip()
 
     def OnListBox2Listbox(self, event):
+        # 点击列表框2时触发 逻辑同上
         self.listBox1.Select(-1)
         self.listBox3.Select(-1)
         select_num = self.listBox2.GetSelection()
@@ -500,6 +529,7 @@ class Frame1(wx.Frame):
         event.Skip()
 
     def OnListBox3Listbox(self, event):
+        # 点击列表框3时触发 逻辑同上
         self.listBox1.Select(-1)
         self.listBox2.Select(-1)
         select_num = self.listBox3.GetSelection()
@@ -507,3 +537,4 @@ class Frame1(wx.Frame):
         self.listBox1.Select(self.xref1[index])
         self.listBox2.Select(self.xref2[index])
         event.Skip()
+

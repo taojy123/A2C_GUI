@@ -33,40 +33,6 @@ class Frame1(wx.Frame):
 
     # 以下代码是界面设计器生成的 不可轻易改动
 
-    def _init_coll_gridSizer4_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddWindow(self.button4, 0, border=0, flag=wx.ALIGN_CENTER)
-
-    def _init_coll_gridSizer1_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddWindow(self.staticText13, 0, border=0, flag=wx.ALIGN_CENTER)
-        parent.AddWindow(self.staticText14, 0, border=0, flag=wx.ALIGN_CENTER)
-        parent.AddWindow(self.staticText15, 0, border=0, flag=wx.ALIGN_CENTER)
-
-    def _init_coll_gridSizer2_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddWindow(self.listBox1, 0, border=0, flag=wx.EXPAND)
-        parent.AddWindow(self.listBox2, 0, border=0, flag=wx.EXPAND)
-        parent.AddWindow(self.listBox3, 0, border=0, flag=wx.EXPAND)
-
-    def _init_coll_boxSizer1_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddSizer(self.gridSizer1, 0, border=0, flag=wx.EXPAND)
-        parent.AddSizer(self.gridSizer2, 10, border=0, flag=wx.EXPAND)
-        parent.AddSizer(self.gridSizer3, 0, border=0, flag=wx.EXPAND)
-        parent.AddSizer(self.gridSizer4, 0, border=0, flag=wx.EXPAND)
-
-    def _init_coll_gridSizer3_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddWindow(self.button1, 0, border=0, flag=wx.ALIGN_CENTER)
-        parent.AddWindow(self.button2, 0, border=0, flag=wx.ALIGN_CENTER)
-        parent.AddWindow(self.button3, 0, border=0, flag=wx.ALIGN_CENTER)
-
     def _init_coll_notebook1_Pages(self, parent):
         # generated method, don't edit
 
@@ -77,30 +43,10 @@ class Frame1(wx.Frame):
         parent.AddPage(imageId=-1, page=self.panel3, select=False, text=u'RSL')
         parent.AddPage(imageId=-1, page=self.panel4, select=False, text=u'SIM')
 
-    def _init_sizers(self):
-        # generated method, don't edit
-        self.boxSizer1 = wx.BoxSizer(orient=wx.VERTICAL)
-
-        self.gridSizer1 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
-
-        self.gridSizer2 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
-
-        self.gridSizer3 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
-
-        self.gridSizer4 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
-
-        self._init_coll_boxSizer1_Items(self.boxSizer1)
-        self._init_coll_gridSizer1_Items(self.gridSizer1)
-        self._init_coll_gridSizer2_Items(self.gridSizer2)
-        self._init_coll_gridSizer3_Items(self.gridSizer3)
-        self._init_coll_gridSizer4_Items(self.gridSizer4)
-
-        self.panel2.SetSizer(self.boxSizer1)
-
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(148, 71), size=wx.Size(900, 700),
+              pos=wx.Point(151, 78), size=wx.Size(900, 700),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(884, 662))
         self.SetMinSize(wx.Size(580, 660))
@@ -119,6 +65,7 @@ class Frame1(wx.Frame):
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
               style=wx.TAB_TRAVERSAL)
         self.panel2.SetToolTipString(u'')
+        self.panel2.Bind(wx.EVT_SIZE, self.OnPanel2Size)
 
         self.panel3 = wx.Panel(id=wxID_FRAME1PANEL3, name='panel3',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
@@ -398,11 +345,27 @@ class Frame1(wx.Frame):
 
         self._init_coll_notebook1_Pages(self.notebook1)
 
-        self._init_sizers()
-
     def __init__(self, parent):
         # 调用绘制界面方法
         self._init_ctrls(parent)
+        
+        self.xref1 = []
+        self.xref2 = []
+        self.xref3 = []
+        
+        self.staticText13_x, y = self.staticText13.GetPosition()
+        self.staticText14_x, y = self.staticText14.GetPosition()
+        self.staticText15_x, y = self.staticText15.GetPosition()
+        self.button1_x, y = self.button1.GetPosition()
+        self.button2_x, y = self.button2.GetPosition()
+        self.button3_x, y = self.button3.GetPosition()
+        self.button4_x, y = self.button4.GetPosition()
+        w, self.staticText13_h = self.staticText13.GetSize()
+        w, self.button1_h = self.button1.GetSize()
+        w, self.button4_h = self.button4.GetSize()
+        self.ori_w, h = self.panel2.GetSize()
+        self.prev_w, self.prev_h = self.ori_w, h
+                
 
 
     def set_selected(self, file_label):
@@ -537,4 +500,58 @@ class Frame1(wx.Frame):
         self.listBox1.Select(self.xref1[index])
         self.listBox2.Select(self.xref2[index])
         event.Skip()
+
+    def OnPanel2Size(self, event):
+        
+        cur_w, cur_h = self.panel2.GetSize()
+                                    
+        x, y = self.staticText13.GetPosition() 
+        x = self.staticText13_x * cur_w / self.ori_w
+        self.staticText13.SetPosition((x, y))
+        
+        x, y = self.staticText14.GetPosition() 
+        x = self.staticText14_x * cur_w / self.ori_w
+        self.staticText14.SetPosition((x, y))
+        
+        x, y = self.staticText15.GetPosition() 
+        x = self.staticText15_x * cur_w / self.ori_w
+        self.staticText15.SetPosition((x, y))
+        
+        x, y = self.button1.GetPosition() 
+        x = self.button1_x * cur_w / self.ori_w
+        y = cur_h - self.button1_h - self.button4_h
+        self.button1.SetPosition((x, y))
+        
+        x, y = self.button2.GetPosition() 
+        x = self.button2_x * cur_w / self.ori_w
+        y = cur_h - self.button1_h - self.button4_h
+        self.button2.SetPosition((x, y))
+        
+        x, y = self.button3.GetPosition() 
+        x = self.button3_x * cur_w / self.ori_w
+        y = cur_h - self.button1_h - self.button4_h
+        self.button3.SetPosition((x, y))
+        
+        x, y = self.button4.GetPosition() 
+        x = self.button4_x * cur_w / self.ori_w
+        y = cur_h - self.button4_h
+        self.button4.SetPosition((x, y))
+        
+        x = 0
+        y = self.staticText13_h
+        w = cur_w / 3
+        h = cur_h - self.staticText13_h - self.button1_h - self.button4_h
+        self.listBox1.SetPosition((x, y))
+        self.listBox1.SetSize((w, h))
+        
+        x = w
+        self.listBox2.SetPosition((x, y))
+        self.listBox2.SetSize((w, h))
+        
+        x = w * 2
+        self.listBox3.SetPosition((x, y))
+        self.listBox3.SetSize((w, h))
+                
+        event.Skip()
+        
 
