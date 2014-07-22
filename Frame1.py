@@ -100,7 +100,7 @@ class Frame1(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(634, 131), size=wx.Size(900, 700),
+              pos=wx.Point(148, 71), size=wx.Size(900, 700),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(884, 662))
         self.SetMinSize(wx.Size(580, 660))
@@ -242,21 +242,21 @@ class Frame1(wx.Frame):
 
         self.sama_btn = wx.Button(id=wxID_FRAME1SAMA_BTN,
               label=u'Optional SAMA FILE', name=u'sama_btn', parent=self.panel1,
-              pos=wx.Point(352, 168), size=wx.Size(120, 23), style=0)
+              pos=wx.Point(352, 168), size=wx.Size(136, 23), style=0)
         self.sama_btn.SetToolTipString(u'')
         self.sama_btn.Bind(wx.EVT_BUTTON, self.OnSama_btnButton,
               id=wxID_FRAME1SAMA_BTN)
 
         self.ctestbench_btn = wx.Button(id=wxID_FRAME1CTESTBENCH_BTN,
               label=u'C Testbench', name=u'ctestbench_btn', parent=self.panel1,
-              pos=wx.Point(352, 136), size=wx.Size(80, 23), style=0)
+              pos=wx.Point(352, 136), size=wx.Size(104, 23), style=0)
         self.ctestbench_btn.SetToolTipString(u'')
         self.ctestbench_btn.Bind(wx.EVT_BUTTON, self.OnCtestbench_btnButton,
               id=wxID_FRAME1CTESTBENCH_BTN)
 
         self.source_btn = wx.Button(id=wxID_FRAME1SOURCE_BTN,
               label=u'LLVM-linked source/cdfg.tcl', name=u'source_btn',
-              parent=self.panel1, pos=wx.Point(352, 104), size=wx.Size(152, 23),
+              parent=self.panel1, pos=wx.Point(352, 104), size=wx.Size(176, 23),
               style=0)
         self.source_btn.SetToolTipString(u'')
         self.source_btn.Bind(wx.EVT_BUTTON, self.OnSource_btnButton,
