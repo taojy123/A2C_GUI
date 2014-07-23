@@ -36,17 +36,16 @@ class Frame1(wx.Frame):
     def _init_coll_notebook1_Pages(self, parent):
         # generated method, don't edit
 
-        parent.AddPage(imageId=-1, page=self.panel1, select=True,
+        parent.AddPage(imageId=-1, page=self.panel1, select=False,
               text=u'Config_Ctrl')
-        parent.AddPage(imageId=-1, page=self.panel2, select=False,
-              text=u'Codes')
+        parent.AddPage(imageId=-1, page=self.panel2, select=True, text=u'Codes')
         parent.AddPage(imageId=-1, page=self.panel3, select=False, text=u'RSL')
         parent.AddPage(imageId=-1, page=self.panel4, select=False, text=u'SIM')
 
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(151, 78), size=wx.Size(900, 700),
+              pos=wx.Point(419, 81), size=wx.Size(900, 700),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(884, 662))
         self.SetMinSize(wx.Size(580, 660))
@@ -304,18 +303,21 @@ class Frame1(wx.Frame):
         self.listBox1 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX1,
               name='listBox1', parent=self.panel2, pos=wx.Point(0, 13),
               size=wx.Size(292, 572), style=wx.LB_HSCROLL)
+        self.listBox1.SetMinSize(wx.Size(-1, -1))
         self.listBox1.Bind(wx.EVT_LISTBOX, self.OnListBox1Listbox,
               id=wxID_FRAME1LISTBOX1)
 
         self.listBox2 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX2,
               name='listBox2', parent=self.panel2, pos=wx.Point(292, 13),
               size=wx.Size(292, 572), style=wx.LB_HSCROLL)
+        self.listBox2.SetMinSize(wx.Size(-1, -1))
         self.listBox2.Bind(wx.EVT_LISTBOX, self.OnListBox2Listbox,
               id=wxID_FRAME1LISTBOX2)
 
         self.listBox3 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX3,
               name='listBox3', parent=self.panel2, pos=wx.Point(584, 13),
               size=wx.Size(292, 572), style=wx.LB_HSCROLL)
+        self.listBox3.SetMinSize(wx.Size(-1, -1))
         self.listBox3.Bind(wx.EVT_LISTBOX, self.OnListBox3Listbox,
               id=wxID_FRAME1LISTBOX3)
 
