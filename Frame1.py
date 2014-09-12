@@ -10,38 +10,43 @@ def create(parent):
 # 定义所用到的所有的控件的id
 [wxID_FRAME1, wxID_FRAME1BUTTON1, wxID_FRAME1BUTTON2, wxID_FRAME1BUTTON3, 
  wxID_FRAME1BUTTON4, wxID_FRAME1BUTTON5, wxID_FRAME1CHECKBOX1, 
- wxID_FRAME1CHECKBOX2, wxID_FRAME1CHECKBOX3, wxID_FRAME1CHECKBOX4, 
- wxID_FRAME1CHECKBOX5, wxID_FRAME1CHECKBOX6, wxID_FRAME1C_COURCE_CODE_BTN, 
- wxID_FRAME1C_SOURCE_CODE_LABEL, wxID_FRAME1C_SOURCE_CODE_TEXT, 
- wxID_FRAME1C_TESTBENCH_BTN, wxID_FRAME1C_TESTBENCH_LABEL, 
- wxID_FRAME1C_TESTBENCH_TEXT, wxID_FRAME1GO_BTN, wxID_FRAME1LISTBOX1, 
- wxID_FRAME1LISTBOX2, wxID_FRAME1LISTBOX3, wxID_FRAME1LLVM_BUILD_PATH_BTN, 
- wxID_FRAME1LLVM_BUILD_PATH_LABEL, wxID_FRAME1LLVM_BUILD_PATH_TEXT, 
- wxID_FRAME1NOTEBOOK1, wxID_FRAME1PANEL1, wxID_FRAME1PANEL10, 
- wxID_FRAME1PANEL11, wxID_FRAME1PANEL2, wxID_FRAME1PANEL3, wxID_FRAME1PANEL4, 
- wxID_FRAME1PANEL5, wxID_FRAME1PANEL6, wxID_FRAME1PANEL7, wxID_FRAME1PANEL8, 
- wxID_FRAME1PANEL9, wxID_FRAME1STATICTEXT1, wxID_FRAME1STATICTEXT10, 
- wxID_FRAME1STATICTEXT11, wxID_FRAME1STATICTEXT12, wxID_FRAME1STATICTEXT13, 
- wxID_FRAME1STATICTEXT14, wxID_FRAME1STATICTEXT15, wxID_FRAME1STATICTEXT16, 
- wxID_FRAME1STATICTEXT17, wxID_FRAME1STATICTEXT18, wxID_FRAME1STATICTEXT19, 
- wxID_FRAME1STATICTEXT2, wxID_FRAME1STATICTEXT20, wxID_FRAME1STATICTEXT21, 
- wxID_FRAME1STATICTEXT22, wxID_FRAME1STATICTEXT23, wxID_FRAME1STATICTEXT24, 
- wxID_FRAME1STATICTEXT25, wxID_FRAME1STATICTEXT26, wxID_FRAME1STATICTEXT27, 
- wxID_FRAME1STATICTEXT28, wxID_FRAME1STATICTEXT29, wxID_FRAME1STATICTEXT3, 
- wxID_FRAME1STATICTEXT30, wxID_FRAME1STATICTEXT31, wxID_FRAME1STATICTEXT32, 
- wxID_FRAME1STATICTEXT33, wxID_FRAME1STATICTEXT34, wxID_FRAME1STATICTEXT35, 
- wxID_FRAME1STATICTEXT36, wxID_FRAME1STATICTEXT37, wxID_FRAME1STATICTEXT38, 
- wxID_FRAME1STATICTEXT39, wxID_FRAME1STATICTEXT4, wxID_FRAME1STATICTEXT40, 
- wxID_FRAME1STATICTEXT41, wxID_FRAME1STATICTEXT42, wxID_FRAME1STATICTEXT43, 
- wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT6, wxID_FRAME1STATICTEXT7, 
- wxID_FRAME1STATICTEXT8, wxID_FRAME1STATICTEXT9, wxID_FRAME1TEXTCTRL1, 
- wxID_FRAME1TEXTCTRL10, wxID_FRAME1TEXTCTRL11, wxID_FRAME1TEXTCTRL12, 
- wxID_FRAME1TEXTCTRL13, wxID_FRAME1TEXTCTRL14, wxID_FRAME1TEXTCTRL15, 
- wxID_FRAME1TEXTCTRL16, wxID_FRAME1TEXTCTRL17, wxID_FRAME1TEXTCTRL2, 
- wxID_FRAME1TEXTCTRL3, wxID_FRAME1TEXTCTRL4, wxID_FRAME1TEXTCTRL5, 
- wxID_FRAME1TEXTCTRL6, wxID_FRAME1TEXTCTRL7, wxID_FRAME1TEXTCTRL8, 
- wxID_FRAME1TEXTCTRL9, 
-] = [wx.NewId() for _init_ctrls in range(97)]
+ wxID_FRAME1CHECKBOX10, wxID_FRAME1CHECKBOX11, wxID_FRAME1CHECKBOX12, 
+ wxID_FRAME1CHECKBOX13, wxID_FRAME1CHECKBOX2, wxID_FRAME1CHECKBOX3, 
+ wxID_FRAME1CHECKBOX4, wxID_FRAME1CHECKBOX5, wxID_FRAME1CHECKBOX6, 
+ wxID_FRAME1CHECKBOX7, wxID_FRAME1CHECKBOX8, wxID_FRAME1CHECKBOX9, 
+ wxID_FRAME1C_COURCE_CODE_BTN, wxID_FRAME1C_SOURCE_CODE_LABEL, 
+ wxID_FRAME1C_SOURCE_CODE_TEXT, wxID_FRAME1C_TESTBENCH_BTN, 
+ wxID_FRAME1C_TESTBENCH_LABEL, wxID_FRAME1C_TESTBENCH_TEXT, wxID_FRAME1GO_BTN, 
+ wxID_FRAME1LISTBOX1, wxID_FRAME1LISTBOX2, wxID_FRAME1LISTBOX3, 
+ wxID_FRAME1LLVM_BUILD_PATH_BTN, wxID_FRAME1LLVM_BUILD_PATH_LABEL, 
+ wxID_FRAME1LLVM_BUILD_PATH_TEXT, wxID_FRAME1NOTEBOOK1, wxID_FRAME1PANEL1, 
+ wxID_FRAME1PANEL10, wxID_FRAME1PANEL11, wxID_FRAME1PANEL2, wxID_FRAME1PANEL3, 
+ wxID_FRAME1PANEL4, wxID_FRAME1PANEL5, wxID_FRAME1PANEL6, wxID_FRAME1PANEL7, 
+ wxID_FRAME1PANEL8, wxID_FRAME1PANEL9, wxID_FRAME1STATICTEXT1, 
+ wxID_FRAME1STATICTEXT10, wxID_FRAME1STATICTEXT11, wxID_FRAME1STATICTEXT12, 
+ wxID_FRAME1STATICTEXT13, wxID_FRAME1STATICTEXT14, wxID_FRAME1STATICTEXT15, 
+ wxID_FRAME1STATICTEXT16, wxID_FRAME1STATICTEXT17, wxID_FRAME1STATICTEXT18, 
+ wxID_FRAME1STATICTEXT19, wxID_FRAME1STATICTEXT2, wxID_FRAME1STATICTEXT20, 
+ wxID_FRAME1STATICTEXT21, wxID_FRAME1STATICTEXT22, wxID_FRAME1STATICTEXT23, 
+ wxID_FRAME1STATICTEXT24, wxID_FRAME1STATICTEXT25, wxID_FRAME1STATICTEXT26, 
+ wxID_FRAME1STATICTEXT27, wxID_FRAME1STATICTEXT28, wxID_FRAME1STATICTEXT29, 
+ wxID_FRAME1STATICTEXT3, wxID_FRAME1STATICTEXT30, wxID_FRAME1STATICTEXT31, 
+ wxID_FRAME1STATICTEXT32, wxID_FRAME1STATICTEXT33, wxID_FRAME1STATICTEXT34, 
+ wxID_FRAME1STATICTEXT35, wxID_FRAME1STATICTEXT36, wxID_FRAME1STATICTEXT37, 
+ wxID_FRAME1STATICTEXT38, wxID_FRAME1STATICTEXT39, wxID_FRAME1STATICTEXT4, 
+ wxID_FRAME1STATICTEXT40, wxID_FRAME1STATICTEXT41, wxID_FRAME1STATICTEXT42, 
+ wxID_FRAME1STATICTEXT43, wxID_FRAME1STATICTEXT44, wxID_FRAME1STATICTEXT45, 
+ wxID_FRAME1STATICTEXT46, wxID_FRAME1STATICTEXT47, wxID_FRAME1STATICTEXT48, 
+ wxID_FRAME1STATICTEXT49, wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT6, 
+ wxID_FRAME1STATICTEXT7, wxID_FRAME1STATICTEXT8, wxID_FRAME1STATICTEXT9, 
+ wxID_FRAME1TEXTCTRL1, wxID_FRAME1TEXTCTRL10, wxID_FRAME1TEXTCTRL11, 
+ wxID_FRAME1TEXTCTRL12, wxID_FRAME1TEXTCTRL13, wxID_FRAME1TEXTCTRL14, 
+ wxID_FRAME1TEXTCTRL15, wxID_FRAME1TEXTCTRL16, wxID_FRAME1TEXTCTRL17, 
+ wxID_FRAME1TEXTCTRL18, wxID_FRAME1TEXTCTRL19, wxID_FRAME1TEXTCTRL2, 
+ wxID_FRAME1TEXTCTRL20, wxID_FRAME1TEXTCTRL21, wxID_FRAME1TEXTCTRL3, 
+ wxID_FRAME1TEXTCTRL4, wxID_FRAME1TEXTCTRL5, wxID_FRAME1TEXTCTRL6, 
+ wxID_FRAME1TEXTCTRL7, wxID_FRAME1TEXTCTRL8, wxID_FRAME1TEXTCTRL9, 
+] = [wx.NewId() for _init_ctrls in range(114)]
 
 
 # 主窗口的类描述
@@ -99,9 +104,9 @@ class Frame1(wx.Frame):
               text=u'Setup')
         parent.AddPage(imageId=-1, page=self.panel2, select=False,
               text=u'Cross Cor')
-        parent.AddPage(imageId=-1, page=self.panel3, select=True,
+        parent.AddPage(imageId=-1, page=self.panel3, select=False,
               text=u'Archi Spec')
-        parent.AddPage(imageId=-1, page=self.panel4, select=False,
+        parent.AddPage(imageId=-1, page=self.panel4, select=True,
               text=u'IO Archi Spec')
         parent.AddPage(imageId=-1, page=self.panel5, select=False,
               text=u'Memory Archi Spec')
@@ -144,7 +149,7 @@ class Frame1(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(496, 37), size=wx.Size(896, 704),
+              pos=wx.Point(550, 89), size=wx.Size(896, 704),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(880, 666))
         self.SetMinSize(wx.Size(888, 700))
@@ -720,6 +725,108 @@ class Frame1(wx.Frame):
               name='button5', parent=self.panel3, pos=wx.Point(336, 592),
               size=wx.Size(96, 23), style=0)
 
+        self.staticText44 = wx.StaticText(id=wxID_FRAME1STATICTEXT44,
+              label=u'IO Architecture Specifications', name='staticText44',
+              parent=self.panel4, pos=wx.Point(264, 8), size=wx.Size(242, 19),
+              style=0)
+        self.staticText44.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.textCtrl18 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL18,
+              name='textCtrl18', parent=self.panel4, pos=wx.Point(80, 104),
+              size=wx.Size(200, 232), style=wx.TE_MULTILINE, value=u'')
+
+        self.staticText45 = wx.StaticText(id=wxID_FRAME1STATICTEXT45,
+              label=u'IOX', name='staticText45', parent=self.panel4,
+              pos=wx.Point(128, 72), size=wx.Size(19, 13), style=0)
+
+        self.checkBox7 = wx.CheckBox(id=wxID_FRAME1CHECKBOX7, label=u'channel',
+              name='checkBox7', parent=self.panel4, pos=wx.Point(360, 112),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox7.SetValue(True)
+        self.checkBox7.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
+
+        self.checkBox8 = wx.CheckBox(id=wxID_FRAME1CHECKBOX8,
+              label=u'data pump', name='checkBox8', parent=self.panel4,
+              pos=wx.Point(360, 144), size=wx.Size(70, 13), style=0)
+        self.checkBox8.SetValue(True)
+        self.checkBox8.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
+
+        self.checkBox9 = wx.CheckBox(id=wxID_FRAME1CHECKBOX9, label=u'fifo',
+              name='checkBox9', parent=self.panel4, pos=wx.Point(360, 176),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox9.SetValue(True)
+        self.checkBox9.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
+
+        self.checkBox10 = wx.CheckBox(id=wxID_FRAME1CHECKBOX10,
+              label=u'ext memory', name='checkBox10', parent=self.panel4,
+              pos=wx.Point(360, 208), size=wx.Size(76, 13), style=0)
+        self.checkBox10.SetValue(True)
+        self.checkBox10.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.checkBox11 = wx.CheckBox(id=wxID_FRAME1CHECKBOX11,
+              label=u'register', name='checkBox11', parent=self.panel4,
+              pos=wx.Point(360, 240), size=wx.Size(76, 13), style=0)
+        self.checkBox11.SetValue(True)
+        self.checkBox11.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.checkBox12 = wx.CheckBox(id=wxID_FRAME1CHECKBOX12,
+              label=u'Pos edge', name='checkBox12', parent=self.panel4,
+              pos=wx.Point(360, 304), size=wx.Size(76, 13), style=0)
+        self.checkBox12.SetValue(True)
+        self.checkBox12.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.checkBox13 = wx.CheckBox(id=wxID_FRAME1CHECKBOX13,
+              label=u'Neg edge', name='checkBox13', parent=self.panel4,
+              pos=wx.Point(464, 304), size=wx.Size(76, 13), style=0)
+        self.checkBox13.SetValue(True)
+        self.checkBox13.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText46 = wx.StaticText(id=wxID_FRAME1STATICTEXT46,
+              label=u'with the following inline entries:', name='staticText46',
+              parent=self.panel4, pos=wx.Point(88, 400), size=wx.Size(152, 13),
+              style=0)
+
+        self.staticText47 = wx.StaticText(id=wxID_FRAME1STATICTEXT47,
+              label=u'Bitrate (bps)', name='staticText47', parent=self.panel4,
+              pos=wx.Point(88, 432), size=wx.Size(62, 13), style=0)
+        self.staticText47.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText48 = wx.StaticText(id=wxID_FRAME1STATICTEXT48,
+              label=u'Bitwidth', name='staticText48', parent=self.panel4,
+              pos=wx.Point(88, 464), size=wx.Size(40, 13), style=0)
+        self.staticText48.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText49 = wx.StaticText(id=wxID_FRAME1STATICTEXT49,
+              label=u'Clock', name='staticText49', parent=self.panel4,
+              pos=wx.Point(88, 496), size=wx.Size(27, 13), style=0)
+        self.staticText49.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.textCtrl19 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL19,
+              name='textCtrl19', parent=self.panel4, pos=wx.Point(360, 427),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl19.Bind(wx.EVT_KEY_UP, self.OnTextCtrl19KeyUp)
+
+        self.textCtrl20 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL20,
+              name='textCtrl20', parent=self.panel4, pos=wx.Point(360, 459),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl20.Bind(wx.EVT_KEY_UP, self.OnTextCtrl20KeyUp)
+
+        self.textCtrl21 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL21,
+              name='textCtrl21', parent=self.panel4, pos=wx.Point(360, 491),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl21.Bind(wx.EVT_KEY_UP, self.OnTextCtrl21KeyUp)
+
         self._init_coll_notebook1_Pages(self.notebook1)
 
         self._init_sizers()
@@ -952,6 +1059,18 @@ class Frame1(wx.Frame):
 
     def OnTextCtrl17KeyUp(self, event):
         self.check_float(self.textCtrl17)
+        event.Skip()
+
+    def OnTextCtrl19KeyUp(self, event):
+        self.check_float(self.textCtrl19)
+        event.Skip()
+
+    def OnTextCtrl20KeyUp(self, event):
+        self.check_integer(self.textCtrl20)
+        event.Skip()
+
+    def OnTextCtrl21KeyUp(self, event):
+        self.check_integer(self.textCtrl21)
         event.Skip()
 
 
