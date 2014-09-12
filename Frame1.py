@@ -9,20 +9,23 @@ def create(parent):
 
 # 定义所用到的所有的控件的id
 [wxID_FRAME1, wxID_FRAME1BUTTON1, wxID_FRAME1BUTTON2, wxID_FRAME1BUTTON3, 
- wxID_FRAME1BUTTON4, wxID_FRAME1BUTTON5, wxID_FRAME1CHECKBOX1, 
- wxID_FRAME1CHECKBOX10, wxID_FRAME1CHECKBOX11, wxID_FRAME1CHECKBOX12, 
- wxID_FRAME1CHECKBOX13, wxID_FRAME1CHECKBOX2, wxID_FRAME1CHECKBOX3, 
- wxID_FRAME1CHECKBOX4, wxID_FRAME1CHECKBOX5, wxID_FRAME1CHECKBOX6, 
- wxID_FRAME1CHECKBOX7, wxID_FRAME1CHECKBOX8, wxID_FRAME1CHECKBOX9, 
- wxID_FRAME1C_COURCE_CODE_BTN, wxID_FRAME1C_SOURCE_CODE_LABEL, 
- wxID_FRAME1C_SOURCE_CODE_TEXT, wxID_FRAME1C_TESTBENCH_BTN, 
- wxID_FRAME1C_TESTBENCH_LABEL, wxID_FRAME1C_TESTBENCH_TEXT, wxID_FRAME1GO_BTN, 
- wxID_FRAME1LISTBOX1, wxID_FRAME1LISTBOX2, wxID_FRAME1LISTBOX3, 
- wxID_FRAME1LLVM_BUILD_PATH_BTN, wxID_FRAME1LLVM_BUILD_PATH_LABEL, 
- wxID_FRAME1LLVM_BUILD_PATH_TEXT, wxID_FRAME1NOTEBOOK1, wxID_FRAME1PANEL1, 
- wxID_FRAME1PANEL10, wxID_FRAME1PANEL11, wxID_FRAME1PANEL2, wxID_FRAME1PANEL3, 
+ wxID_FRAME1BUTTON4, wxID_FRAME1BUTTON5, wxID_FRAME1BUTTON6, 
+ wxID_FRAME1BUTTON7, wxID_FRAME1BUTTON8, wxID_FRAME1BUTTON9, 
+ wxID_FRAME1CHECKBOX1, wxID_FRAME1CHECKBOX10, wxID_FRAME1CHECKBOX11, 
+ wxID_FRAME1CHECKBOX12, wxID_FRAME1CHECKBOX13, wxID_FRAME1CHECKBOX2, 
+ wxID_FRAME1CHECKBOX3, wxID_FRAME1CHECKBOX4, wxID_FRAME1CHECKBOX5, 
+ wxID_FRAME1CHECKBOX6, wxID_FRAME1CHECKBOX7, wxID_FRAME1CHECKBOX8, 
+ wxID_FRAME1CHECKBOX9, wxID_FRAME1C_COURCE_CODE_BTN, 
+ wxID_FRAME1C_SOURCE_CODE_LABEL, wxID_FRAME1C_SOURCE_CODE_TEXT, 
+ wxID_FRAME1C_TESTBENCH_BTN, wxID_FRAME1C_TESTBENCH_LABEL, 
+ wxID_FRAME1C_TESTBENCH_TEXT, wxID_FRAME1GO_BTN, wxID_FRAME1LISTBOX1, 
+ wxID_FRAME1LISTBOX2, wxID_FRAME1LISTBOX3, wxID_FRAME1LLVM_BUILD_PATH_BTN, 
+ wxID_FRAME1LLVM_BUILD_PATH_LABEL, wxID_FRAME1LLVM_BUILD_PATH_TEXT, 
+ wxID_FRAME1NOTEBOOK1, wxID_FRAME1PANEL1, wxID_FRAME1PANEL10, 
+ wxID_FRAME1PANEL11, wxID_FRAME1PANEL12, wxID_FRAME1PANEL2, wxID_FRAME1PANEL3, 
  wxID_FRAME1PANEL4, wxID_FRAME1PANEL5, wxID_FRAME1PANEL6, wxID_FRAME1PANEL7, 
- wxID_FRAME1PANEL8, wxID_FRAME1PANEL9, wxID_FRAME1STATICTEXT1, 
+ wxID_FRAME1PANEL8, wxID_FRAME1PANEL9, wxID_FRAME1STATICBITMAP1, 
+ wxID_FRAME1STATICBITMAP2, wxID_FRAME1STATICBITMAP3, wxID_FRAME1STATICTEXT1, 
  wxID_FRAME1STATICTEXT10, wxID_FRAME1STATICTEXT11, wxID_FRAME1STATICTEXT12, 
  wxID_FRAME1STATICTEXT13, wxID_FRAME1STATICTEXT14, wxID_FRAME1STATICTEXT15, 
  wxID_FRAME1STATICTEXT16, wxID_FRAME1STATICTEXT17, wxID_FRAME1STATICTEXT18, 
@@ -37,16 +40,21 @@ def create(parent):
  wxID_FRAME1STATICTEXT40, wxID_FRAME1STATICTEXT41, wxID_FRAME1STATICTEXT42, 
  wxID_FRAME1STATICTEXT43, wxID_FRAME1STATICTEXT44, wxID_FRAME1STATICTEXT45, 
  wxID_FRAME1STATICTEXT46, wxID_FRAME1STATICTEXT47, wxID_FRAME1STATICTEXT48, 
- wxID_FRAME1STATICTEXT49, wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT6, 
- wxID_FRAME1STATICTEXT7, wxID_FRAME1STATICTEXT8, wxID_FRAME1STATICTEXT9, 
- wxID_FRAME1TEXTCTRL1, wxID_FRAME1TEXTCTRL10, wxID_FRAME1TEXTCTRL11, 
- wxID_FRAME1TEXTCTRL12, wxID_FRAME1TEXTCTRL13, wxID_FRAME1TEXTCTRL14, 
- wxID_FRAME1TEXTCTRL15, wxID_FRAME1TEXTCTRL16, wxID_FRAME1TEXTCTRL17, 
- wxID_FRAME1TEXTCTRL18, wxID_FRAME1TEXTCTRL19, wxID_FRAME1TEXTCTRL2, 
- wxID_FRAME1TEXTCTRL20, wxID_FRAME1TEXTCTRL21, wxID_FRAME1TEXTCTRL3, 
- wxID_FRAME1TEXTCTRL4, wxID_FRAME1TEXTCTRL5, wxID_FRAME1TEXTCTRL6, 
- wxID_FRAME1TEXTCTRL7, wxID_FRAME1TEXTCTRL8, wxID_FRAME1TEXTCTRL9, 
-] = [wx.NewId() for _init_ctrls in range(114)]
+ wxID_FRAME1STATICTEXT49, wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT50, 
+ wxID_FRAME1STATICTEXT51, wxID_FRAME1STATICTEXT52, wxID_FRAME1STATICTEXT53, 
+ wxID_FRAME1STATICTEXT54, wxID_FRAME1STATICTEXT55, wxID_FRAME1STATICTEXT56, 
+ wxID_FRAME1STATICTEXT57, wxID_FRAME1STATICTEXT58, wxID_FRAME1STATICTEXT59, 
+ wxID_FRAME1STATICTEXT6, wxID_FRAME1STATICTEXT7, wxID_FRAME1STATICTEXT8, 
+ wxID_FRAME1STATICTEXT9, wxID_FRAME1TEXTCTRL1, wxID_FRAME1TEXTCTRL10, 
+ wxID_FRAME1TEXTCTRL11, wxID_FRAME1TEXTCTRL12, wxID_FRAME1TEXTCTRL13, 
+ wxID_FRAME1TEXTCTRL14, wxID_FRAME1TEXTCTRL15, wxID_FRAME1TEXTCTRL16, 
+ wxID_FRAME1TEXTCTRL17, wxID_FRAME1TEXTCTRL18, wxID_FRAME1TEXTCTRL19, 
+ wxID_FRAME1TEXTCTRL2, wxID_FRAME1TEXTCTRL20, wxID_FRAME1TEXTCTRL21, 
+ wxID_FRAME1TEXTCTRL22, wxID_FRAME1TEXTCTRL23, wxID_FRAME1TEXTCTRL24, 
+ wxID_FRAME1TEXTCTRL3, wxID_FRAME1TEXTCTRL4, wxID_FRAME1TEXTCTRL5, 
+ wxID_FRAME1TEXTCTRL6, wxID_FRAME1TEXTCTRL7, wxID_FRAME1TEXTCTRL8, 
+ wxID_FRAME1TEXTCTRL9, 
+] = [wx.NewId() for _init_ctrls in range(135)]
 
 
 # 主窗口的类描述
@@ -100,13 +108,12 @@ class Frame1(wx.Frame):
     def _init_coll_notebook1_Pages(self, parent):
         # generated method, don't edit
 
-        parent.AddPage(imageId=-1, page=self.panel1, select=False,
-              text=u'Setup')
+        parent.AddPage(imageId=-1, page=self.panel1, select=True, text=u'Setup')
         parent.AddPage(imageId=-1, page=self.panel2, select=False,
               text=u'Cross Cor')
         parent.AddPage(imageId=-1, page=self.panel3, select=False,
               text=u'Archi Spec')
-        parent.AddPage(imageId=-1, page=self.panel4, select=True,
+        parent.AddPage(imageId=-1, page=self.panel4, select=False,
               text=u'IO Archi Spec')
         parent.AddPage(imageId=-1, page=self.panel5, select=False,
               text=u'Memory Archi Spec')
@@ -122,6 +129,8 @@ class Frame1(wx.Frame):
               text=u'Power')
         parent.AddPage(imageId=-1, page=self.panel11, select=False,
               text=u'Memory Access')
+        parent.AddPage(imageId=-1, page=self.panel12, select=False,
+              text=u'Code Analysis')
 
     def _init_sizers(self):
         # generated method, don't edit
@@ -149,7 +158,7 @@ class Frame1(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(550, 89), size=wx.Size(896, 704),
+              pos=wx.Point(375, 98), size=wx.Size(896, 704),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(880, 666))
         self.SetMinSize(wx.Size(888, 700))
@@ -827,6 +836,118 @@ class Frame1(wx.Frame):
               size=wx.Size(100, 21), style=0, value=u'')
         self.textCtrl21.Bind(wx.EVT_KEY_UP, self.OnTextCtrl21KeyUp)
 
+        self.staticText50 = wx.StaticText(id=wxID_FRAME1STATICTEXT50,
+              label=u'Memory Architecture Specifications', name='staticText50',
+              parent=self.panel5, pos=wx.Point(248, 8), size=wx.Size(288, 19),
+              style=0)
+        self.staticText50.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.textCtrl22 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL22,
+              name='textCtrl22', parent=self.panel5, pos=wx.Point(72, 128),
+              size=wx.Size(320, 376), style=wx.TE_MULTILINE, value=u'')
+
+        self.textCtrl23 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL23,
+              name='textCtrl23', parent=self.panel5, pos=wx.Point(464, 128),
+              size=wx.Size(320, 376), style=wx.TE_MULTILINE, value=u'')
+
+        self.staticText51 = wx.StaticText(id=wxID_FRAME1STATICTEXT51,
+              label=u'Extend Memory Ports', name='staticText51',
+              parent=self.panel5, pos=wx.Point(112, 88), size=wx.Size(104, 13),
+              style=0)
+
+        self.staticText52 = wx.StaticText(id=wxID_FRAME1STATICTEXT52,
+              label=u'Internal Memory Ports', name='staticText52',
+              parent=self.panel5, pos=wx.Point(504, 88), size=wx.Size(108, 13),
+              style=0)
+
+        self.staticText53 = wx.StaticText(id=wxID_FRAME1STATICTEXT53,
+              label=u'CDFG Simulator', name='staticText53', parent=self.panel6,
+              pos=wx.Point(336, 16), size=wx.Size(128, 19), style=0)
+        self.staticText53.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticBitmap1 = wx.StaticBitmap(bitmap=wx.Bitmap('2.png',
+              wx.BITMAP_TYPE_PNG), id=wxID_FRAME1STATICBITMAP1,
+              name='staticBitmap1', parent=self.panel6, pos=wx.Point(432, 64),
+              size=wx.Size(320, 288), style=0)
+
+        self.staticBitmap2 = wx.StaticBitmap(bitmap=wx.Bitmap('1.png',
+              wx.BITMAP_TYPE_PNG), id=wxID_FRAME1STATICBITMAP2,
+              name='staticBitmap2', parent=self.panel6, pos=wx.Point(112, 64),
+              size=wx.Size(320, 288), style=0)
+
+        self.textCtrl24 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL24,
+              name='textCtrl24', parent=self.panel6, pos=wx.Point(112, 352),
+              size=wx.Size(641, 176), style=wx.TE_MULTILINE, value=u'')
+
+        self.button6 = wx.Button(id=wxID_FRAME1BUTTON6, label=u'start',
+              name='button6', parent=self.panel6, pos=wx.Point(120, 576),
+              size=wx.Size(75, 23), style=0)
+
+        self.button7 = wx.Button(id=wxID_FRAME1BUTTON7, label=u'step',
+              name='button7', parent=self.panel6, pos=wx.Point(232, 576),
+              size=wx.Size(75, 23), style=0)
+
+        self.button8 = wx.Button(id=wxID_FRAME1BUTTON8, label=u'cycle',
+              name='button8', parent=self.panel6, pos=wx.Point(336, 576),
+              size=wx.Size(75, 23), style=0)
+
+        self.button9 = wx.Button(id=wxID_FRAME1BUTTON9, label=u'run',
+              name='button9', parent=self.panel6, pos=wx.Point(448, 576),
+              size=wx.Size(75, 23), style=0)
+
+        self.staticText54 = wx.StaticText(id=wxID_FRAME1STATICTEXT54,
+              label=u'CDFG Tools \u2013 Driver Trace', name='staticText54',
+              parent=self.panel7, pos=wx.Point(288, 8), size=wx.Size(214, 19),
+              style=0)
+        self.staticText54.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticText55 = wx.StaticText(id=wxID_FRAME1STATICTEXT55,
+              label=u'CDFG Tools Logic Modification', name='staticText55',
+              parent=self.panel8, pos=wx.Point(272, 8), size=wx.Size(245, 19),
+              style=0)
+        self.staticText55.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticText56 = wx.StaticText(id=wxID_FRAME1STATICTEXT56,
+              label=u'CDFG \u2013 Hierarchical Parallel State Machines',
+              name='staticText56', parent=self.panel9, pos=wx.Point(248, 8),
+              size=wx.Size(358, 19), style=0)
+        self.staticText56.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticText57 = wx.StaticText(id=wxID_FRAME1STATICTEXT57,
+              label=u'Delay/Area/Power per State with State Visits',
+              name='staticText57', parent=self.panel10, pos=wx.Point(248, 8),
+              size=wx.Size(375, 19), style=0)
+        self.staticText57.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticText58 = wx.StaticText(id=wxID_FRAME1STATICTEXT58,
+              label=u'Memory Accesses Trace', name='staticText58',
+              parent=self.panel11, pos=wx.Point(304, 8), size=wx.Size(193, 19),
+              style=0)
+        self.staticText58.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.panel12 = wx.Panel(id=wxID_FRAME1PANEL12, name='panel12',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
+              style=wx.TAB_TRAVERSAL)
+
+        self.staticText59 = wx.StaticText(id=wxID_FRAME1STATICTEXT59,
+              label=u'Hierarchical C Code Analysis', name='staticText59',
+              parent=self.panel12, pos=wx.Point(304, 8), size=wx.Size(231, 19),
+              style=0)
+        self.staticText59.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticBitmap3 = wx.StaticBitmap(bitmap=wx.Bitmap('3.png',
+              wx.BITMAP_TYPE_PNG), id=wxID_FRAME1STATICBITMAP3,
+              name='staticBitmap3', parent=self.panel7, pos=wx.Point(88, 64),
+              size=wx.Size(721, 499), style=0)
+
         self._init_coll_notebook1_Pages(self.notebook1)
 
         self._init_sizers()
@@ -850,10 +971,8 @@ class Frame1(wx.Frame):
     floats = "0123456789."
     
     def check_string(self, textctrl):
-        s = textctrl.GetValue()
         text = ""
-        print s
-        for c in s:
+        for c in textctrl.GetValue():
             if str(c).upper() in self.chars:
                 text += c
         textctrl.SetValue(text)
@@ -1054,11 +1173,11 @@ class Frame1(wx.Frame):
         event.Skip()
 
     def OnTextCtrl16KeyUp(self, event):
-        self.check_float(self.textCtrl16)
+        #self.check_float(self.textCtrl16)
         event.Skip()
 
     def OnTextCtrl17KeyUp(self, event):
-        self.check_float(self.textCtrl17)
+        #self.check_float(self.textCtrl17)
         event.Skip()
 
     def OnTextCtrl19KeyUp(self, event):
