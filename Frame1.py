@@ -9,7 +9,9 @@ def create(parent):
 
 # 定义所用到的所有的控件的id
 [wxID_FRAME1, wxID_FRAME1BUTTON1, wxID_FRAME1BUTTON2, wxID_FRAME1BUTTON3, 
- wxID_FRAME1BUTTON4, wxID_FRAME1CHECKBOX1, wxID_FRAME1C_COURCE_CODE_BTN, 
+ wxID_FRAME1BUTTON4, wxID_FRAME1BUTTON5, wxID_FRAME1CHECKBOX1, 
+ wxID_FRAME1CHECKBOX2, wxID_FRAME1CHECKBOX3, wxID_FRAME1CHECKBOX4, 
+ wxID_FRAME1CHECKBOX5, wxID_FRAME1CHECKBOX6, wxID_FRAME1C_COURCE_CODE_BTN, 
  wxID_FRAME1C_SOURCE_CODE_LABEL, wxID_FRAME1C_SOURCE_CODE_TEXT, 
  wxID_FRAME1C_TESTBENCH_BTN, wxID_FRAME1C_TESTBENCH_LABEL, 
  wxID_FRAME1C_TESTBENCH_TEXT, wxID_FRAME1GO_BTN, wxID_FRAME1LISTBOX1, 
@@ -22,13 +24,24 @@ def create(parent):
  wxID_FRAME1STATICTEXT11, wxID_FRAME1STATICTEXT12, wxID_FRAME1STATICTEXT13, 
  wxID_FRAME1STATICTEXT14, wxID_FRAME1STATICTEXT15, wxID_FRAME1STATICTEXT16, 
  wxID_FRAME1STATICTEXT17, wxID_FRAME1STATICTEXT18, wxID_FRAME1STATICTEXT19, 
- wxID_FRAME1STATICTEXT2, wxID_FRAME1STATICTEXT3, wxID_FRAME1STATICTEXT4, 
+ wxID_FRAME1STATICTEXT2, wxID_FRAME1STATICTEXT20, wxID_FRAME1STATICTEXT21, 
+ wxID_FRAME1STATICTEXT22, wxID_FRAME1STATICTEXT23, wxID_FRAME1STATICTEXT24, 
+ wxID_FRAME1STATICTEXT25, wxID_FRAME1STATICTEXT26, wxID_FRAME1STATICTEXT27, 
+ wxID_FRAME1STATICTEXT28, wxID_FRAME1STATICTEXT29, wxID_FRAME1STATICTEXT3, 
+ wxID_FRAME1STATICTEXT30, wxID_FRAME1STATICTEXT31, wxID_FRAME1STATICTEXT32, 
+ wxID_FRAME1STATICTEXT33, wxID_FRAME1STATICTEXT34, wxID_FRAME1STATICTEXT35, 
+ wxID_FRAME1STATICTEXT36, wxID_FRAME1STATICTEXT37, wxID_FRAME1STATICTEXT38, 
+ wxID_FRAME1STATICTEXT39, wxID_FRAME1STATICTEXT4, wxID_FRAME1STATICTEXT40, 
+ wxID_FRAME1STATICTEXT41, wxID_FRAME1STATICTEXT42, wxID_FRAME1STATICTEXT43, 
  wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT6, wxID_FRAME1STATICTEXT7, 
  wxID_FRAME1STATICTEXT8, wxID_FRAME1STATICTEXT9, wxID_FRAME1TEXTCTRL1, 
- wxID_FRAME1TEXTCTRL2, wxID_FRAME1TEXTCTRL3, wxID_FRAME1TEXTCTRL4, 
- wxID_FRAME1TEXTCTRL5, wxID_FRAME1TEXTCTRL6, wxID_FRAME1TEXTCTRL7, 
- wxID_FRAME1TEXTCTRL8, wxID_FRAME1TEXTCTRL9, 
-] = [wx.NewId() for _init_ctrls in range(59)]
+ wxID_FRAME1TEXTCTRL10, wxID_FRAME1TEXTCTRL11, wxID_FRAME1TEXTCTRL12, 
+ wxID_FRAME1TEXTCTRL13, wxID_FRAME1TEXTCTRL14, wxID_FRAME1TEXTCTRL15, 
+ wxID_FRAME1TEXTCTRL16, wxID_FRAME1TEXTCTRL17, wxID_FRAME1TEXTCTRL2, 
+ wxID_FRAME1TEXTCTRL3, wxID_FRAME1TEXTCTRL4, wxID_FRAME1TEXTCTRL5, 
+ wxID_FRAME1TEXTCTRL6, wxID_FRAME1TEXTCTRL7, wxID_FRAME1TEXTCTRL8, 
+ wxID_FRAME1TEXTCTRL9, 
+] = [wx.NewId() for _init_ctrls in range(97)]
 
 
 # 主窗口的类描述
@@ -38,7 +51,9 @@ class Frame1(wx.Frame):
     def _init_coll_gridSizer4_Items(self, parent):
         # generated method, don't edit
 
+        parent.AddWindow(self.staticText21, 0, border=0, flag=0)
         parent.AddWindow(self.button4, 0, border=0, flag=wx.ALIGN_CENTER)
+        parent.AddWindow(self.staticText22, 0, border=0, flag=0)
 
     def _init_coll_gridSizer3_Items(self, parent):
         # generated method, don't edit
@@ -57,7 +72,9 @@ class Frame1(wx.Frame):
     def _init_coll_gridSizer5_Items(self, parent):
         # generated method, don't edit
 
+        parent.AddWindow(self.staticText20, 0, border=0, flag=0)
         parent.AddWindow(self.staticText12, 0, border=0, flag=wx.ALIGN_CENTER)
+        parent.AddWindow(self.staticText23, 0, border=0, flag=0)
 
     def _init_coll_gridSizer1_Items(self, parent):
         # generated method, don't edit
@@ -69,7 +86,7 @@ class Frame1(wx.Frame):
     def _init_coll_boxSizer1_Items(self, parent):
         # generated method, don't edit
 
-        parent.AddSizer(self.gridSizer5, 0, border=0, flag=0)
+        parent.AddSizer(self.gridSizer5, 0, border=0, flag=wx.EXPAND)
         parent.AddSizer(self.gridSizer1, 0, border=0, flag=wx.EXPAND)
         parent.AddSizer(self.gridSizer2, 10, border=0, flag=wx.EXPAND)
         parent.AddSizer(self.gridSizer3, 0, border=0, flag=wx.EXPAND)
@@ -80,9 +97,9 @@ class Frame1(wx.Frame):
 
         parent.AddPage(imageId=-1, page=self.panel1, select=False,
               text=u'Setup')
-        parent.AddPage(imageId=-1, page=self.panel2, select=True,
+        parent.AddPage(imageId=-1, page=self.panel2, select=False,
               text=u'Cross Cor')
-        parent.AddPage(imageId=-1, page=self.panel3, select=False,
+        parent.AddPage(imageId=-1, page=self.panel3, select=True,
               text=u'Archi Spec')
         parent.AddPage(imageId=-1, page=self.panel4, select=False,
               text=u'IO Archi Spec')
@@ -113,7 +130,7 @@ class Frame1(wx.Frame):
 
         self.gridSizer4 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
 
-        self.gridSizer5 = wx.GridSizer(cols=1, hgap=0, rows=1, vgap=0)
+        self.gridSizer5 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
 
         self._init_coll_boxSizer1_Items(self.boxSizer1)
         self._init_coll_gridSizer1_Items(self.gridSizer1)
@@ -127,34 +144,34 @@ class Frame1(wx.Frame):
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(540, 137), size=wx.Size(900, 700),
+              pos=wx.Point(496, 37), size=wx.Size(896, 704),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
-        self.SetClientSize(wx.Size(884, 662))
-        self.SetMinSize(wx.Size(888, 660))
+        self.SetClientSize(wx.Size(880, 666))
+        self.SetMinSize(wx.Size(888, 700))
         self.SetToolTipString(u'')
         self.SetHelpText(u'')
 
         self.notebook1 = wx.Notebook(id=wxID_FRAME1NOTEBOOK1, name='notebook1',
-              parent=self, pos=wx.Point(0, 0), size=wx.Size(884, 662), style=0)
+              parent=self, pos=wx.Point(0, 0), size=wx.Size(880, 666), style=0)
         self.notebook1.SetToolTipString(u'')
 
         self.panel1 = wx.Panel(id=wxID_FRAME1PANEL1, name='panel1',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel1.SetToolTipString(u'')
 
         self.panel2 = wx.Panel(id=wxID_FRAME1PANEL2, name='panel2',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel2.SetToolTipString(u'')
 
         self.panel3 = wx.Panel(id=wxID_FRAME1PANEL3, name='panel3',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel3.SetToolTipString(u'')
 
         self.panel4 = wx.Panel(id=wxID_FRAME1PANEL4, name='panel4',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel4.SetToolTipString(u'')
 
@@ -352,42 +369,42 @@ class Frame1(wx.Frame):
 
         self.staticText13 = wx.StaticText(id=wxID_FRAME1STATICTEXT13,
               label=u'C Source', name='staticText13', parent=self.panel2,
-              pos=wx.Point(115, 19), size=wx.Size(61, 13), style=0)
+              pos=wx.Point(114, 19), size=wx.Size(61, 13), style=0)
         self.staticText13.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
               False, u'Tahoma'))
 
         self.staticText14 = wx.StaticText(id=wxID_FRAME1STATICTEXT14,
               label=u'CDFG', name='staticText14', parent=self.panel2,
-              pos=wx.Point(407, 19), size=wx.Size(61, 13), style=0)
+              pos=wx.Point(404, 19), size=wx.Size(61, 13), style=0)
         self.staticText14.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
               False, u'Tahoma'))
 
         self.staticText15 = wx.StaticText(id=wxID_FRAME1STATICTEXT15,
               label=u'RTL', name='staticText15', parent=self.panel2,
-              pos=wx.Point(699, 19), size=wx.Size(61, 13), style=0)
+              pos=wx.Point(694, 19), size=wx.Size(61, 13), style=0)
         self.staticText15.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
               False, u'Tahoma'))
 
         self.listBox1 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX1,
               name='listBox1', parent=self.panel2, pos=wx.Point(0, 32),
-              size=wx.Size(292, 553), style=wx.LB_HSCROLL)
+              size=wx.Size(290, 557), style=wx.LB_HSCROLL)
         self.listBox1.Bind(wx.EVT_LISTBOX, self.OnListBox1Listbox,
               id=wxID_FRAME1LISTBOX1)
 
         self.listBox2 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX2,
-              name='listBox2', parent=self.panel2, pos=wx.Point(292, 32),
-              size=wx.Size(292, 553), style=wx.LB_HSCROLL)
+              name='listBox2', parent=self.panel2, pos=wx.Point(290, 32),
+              size=wx.Size(290, 557), style=wx.LB_HSCROLL)
         self.listBox2.Bind(wx.EVT_LISTBOX, self.OnListBox2Listbox,
               id=wxID_FRAME1LISTBOX2)
 
         self.listBox3 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX3,
-              name='listBox3', parent=self.panel2, pos=wx.Point(584, 32),
-              size=wx.Size(292, 553), style=wx.LB_HSCROLL)
+              name='listBox3', parent=self.panel2, pos=wx.Point(580, 32),
+              size=wx.Size(290, 557), style=wx.LB_HSCROLL)
         self.listBox3.Bind(wx.EVT_LISTBOX, self.OnListBox3Listbox,
               id=wxID_FRAME1LISTBOX3)
 
         self.button1 = wx.Button(id=wxID_FRAME1BUTTON1, label=u'Open',
-              name='button1', parent=self.panel2, pos=wx.Point(108, 585),
+              name='button1', parent=self.panel2, pos=wx.Point(107, 589),
               size=wx.Size(75, 23), style=0)
         self.button1.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
               u'Tahoma'))
@@ -395,7 +412,7 @@ class Frame1(wx.Frame):
               id=wxID_FRAME1BUTTON1)
 
         self.button2 = wx.Button(id=wxID_FRAME1BUTTON2, label=u'Open',
-              name='button2', parent=self.panel2, pos=wx.Point(400, 585),
+              name='button2', parent=self.panel2, pos=wx.Point(397, 589),
               size=wx.Size(75, 23), style=0)
         self.button2.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
               u'Tahoma'))
@@ -403,7 +420,7 @@ class Frame1(wx.Frame):
               id=wxID_FRAME1BUTTON2)
 
         self.button3 = wx.Button(id=wxID_FRAME1BUTTON3, label=u'Open',
-              name='button3', parent=self.panel2, pos=wx.Point(692, 585),
+              name='button3', parent=self.panel2, pos=wx.Point(687, 589),
               size=wx.Size(75, 23), style=0)
         self.button3.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
               u'Tahoma'))
@@ -411,7 +428,7 @@ class Frame1(wx.Frame):
               id=wxID_FRAME1BUTTON3)
 
         self.button4 = wx.Button(id=wxID_FRAME1BUTTON4, label=u'Xref File Open',
-              name='button4', parent=self.panel2, pos=wx.Point(89, 608),
+              name='button4', parent=self.panel2, pos=wx.Point(378, 612),
               size=wx.Size(114, 28), style=0)
         self.button4.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
               u'Tahoma'))
@@ -419,31 +436,31 @@ class Frame1(wx.Frame):
               id=wxID_FRAME1BUTTON4)
 
         self.panel5 = wx.Panel(id=wxID_FRAME1PANEL5, name='panel5',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.panel6 = wx.Panel(id=wxID_FRAME1PANEL6, name='panel6',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.panel7 = wx.Panel(id=wxID_FRAME1PANEL7, name='panel7',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.panel8 = wx.Panel(id=wxID_FRAME1PANEL8, name='panel8',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.panel9 = wx.Panel(id=wxID_FRAME1PANEL9, name='panel9',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.panel10 = wx.Panel(id=wxID_FRAME1PANEL10, name='panel10',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.panel11 = wx.Panel(id=wxID_FRAME1PANEL11, name='panel11',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
         self.c_source_code_text = wx.TextCtrl(id=wxID_FRAME1C_SOURCE_CODE_TEXT,
@@ -485,17 +502,223 @@ class Frame1(wx.Frame):
 
         self.staticText11 = wx.StaticText(id=wxID_FRAME1STATICTEXT11,
               label=u'Design Setup/Configuration', name='staticText11',
-              parent=self.panel1, pos=wx.Point(224, 8), size=wx.Size(227, 19),
+              parent=self.panel1, pos=wx.Point(276, 3), size=wx.Size(227, 19),
               style=0)
         self.staticText11.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
               False, u'Tahoma'))
 
         self.staticText12 = wx.StaticText(id=wxID_FRAME1STATICTEXT12,
-              label=u'                                                  Cross Correlation',
-              name='staticText12', parent=self.panel2, pos=wx.Point(0, 0),
-              size=wx.Size(504, 19), style=0)
+              label=u'Cross Correlation', name='staticText12',
+              parent=self.panel2, pos=wx.Point(339, 0), size=wx.Size(192, 19),
+              style=0)
         self.staticText12.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
               False, u'Tahoma'))
+
+        self.staticText20 = wx.StaticText(id=wxID_FRAME1STATICTEXT20,
+              label=u' ', name='staticText20', parent=self.panel2,
+              pos=wx.Point(0, 0), size=wx.Size(61, 13), style=0)
+
+        self.staticText21 = wx.StaticText(id=wxID_FRAME1STATICTEXT21,
+              label=u' ', name='staticText21', parent=self.panel2,
+              pos=wx.Point(0, 612), size=wx.Size(61, 13), style=0)
+
+        self.staticText22 = wx.StaticText(id=wxID_FRAME1STATICTEXT22,
+              label=u' ', name='staticText22', parent=self.panel2,
+              pos=wx.Point(580, 612), size=wx.Size(61, 13), style=0)
+
+        self.staticText23 = wx.StaticText(id=wxID_FRAME1STATICTEXT23,
+              label=u' ', name='staticText23', parent=self.panel2,
+              pos=wx.Point(580, 0), size=wx.Size(61, 13), style=0)
+
+        self.staticText24 = wx.StaticText(id=wxID_FRAME1STATICTEXT24,
+              label=u'Architecture Specifications', name='staticText24',
+              parent=self.panel3, pos=wx.Point(269, 4), size=wx.Size(218, 19),
+              style=0)
+        self.staticText24.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticText25 = wx.StaticText(id=wxID_FRAME1STATICTEXT25,
+              label=u'General Options/Buttton', name='staticText25',
+              parent=self.panel3, pos=wx.Point(104, 32), size=wx.Size(118, 13),
+              style=0)
+
+        self.staticText26 = wx.StaticText(id=wxID_FRAME1STATICTEXT26,
+              label=u'RTL Generation', name='staticText26', parent=self.panel3,
+              pos=wx.Point(104, 64), size=wx.Size(76, 13), style=0)
+        self.staticText26.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText27 = wx.StaticText(id=wxID_FRAME1STATICTEXT27,
+              label=u'Activity Tracking', name='staticText27',
+              parent=self.panel3, pos=wx.Point(104, 88), size=wx.Size(81, 13),
+              style=0)
+        self.staticText27.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText28 = wx.StaticText(id=wxID_FRAME1STATICTEXT28,
+              label=u'General InLine Data Entries', name='staticText28',
+              parent=self.panel3, pos=wx.Point(104, 136), size=wx.Size(132, 13),
+              style=0)
+
+        self.staticText29 = wx.StaticText(id=wxID_FRAME1STATICTEXT29,
+              label=u'Resource Constraints', name='staticText29',
+              parent=self.panel3, pos=wx.Point(104, 160), size=wx.Size(105, 13),
+              style=0)
+        self.staticText29.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText30 = wx.StaticText(id=wxID_FRAME1STATICTEXT30,
+              label=u'Max. Number of Multipliers per cycle',
+              name='staticText30', parent=self.panel3, pos=wx.Point(104, 184),
+              size=wx.Size(175, 13), style=0)
+        self.staticText30.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText31 = wx.StaticText(id=wxID_FRAME1STATICTEXT31,
+              label=u'Max. Number of Add/Subs per cycle', name='staticText31',
+              parent=self.panel3, pos=wx.Point(104, 208), size=wx.Size(174, 13),
+              style=0)
+        self.staticText31.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText32 = wx.StaticText(id=wxID_FRAME1STATICTEXT32,
+              label=u'Max. Number of External Memory Read Port per cycle',
+              name='staticText32', parent=self.panel3, pos=wx.Point(104, 232),
+              size=wx.Size(260, 13), style=0)
+        self.staticText32.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText33 = wx.StaticText(id=wxID_FRAME1STATICTEXT33,
+              label=u'Max. Number of External Memory Write Port per cycle',
+              name='staticText33', parent=self.panel3, pos=wx.Point(104, 256),
+              size=wx.Size(261, 13), style=0)
+        self.staticText33.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText34 = wx.StaticText(id=wxID_FRAME1STATICTEXT34,
+              label=u'Max. Number of External Memory R/W Port per cycle',
+              name='staticText34', parent=self.panel3, pos=wx.Point(104, 280),
+              size=wx.Size(256, 13), style=0)
+        self.staticText34.Enable(True)
+        self.staticText34.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText35 = wx.StaticText(id=wxID_FRAME1STATICTEXT35,
+              label=u'Loop Constraints', name='staticText35',
+              parent=self.panel3, pos=wx.Point(104, 336), size=wx.Size(83, 13),
+              style=0)
+        self.staticText35.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText36 = wx.StaticText(id=wxID_FRAME1STATICTEXT36,
+              label=u'Loop0 SW pipelined', name='staticText36',
+              parent=self.panel3, pos=wx.Point(104, 360), size=wx.Size(96, 13),
+              style=0)
+        self.staticText36.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.staticText37 = wx.StaticText(id=wxID_FRAME1STATICTEXT37,
+              label=u'Max Loop Iteration <int> Unroll by', name='staticText37',
+              parent=self.panel3, pos=wx.Point(304, 360), size=wx.Size(170, 13),
+              style=0)
+        self.staticText37.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+
+        self.checkBox2 = wx.CheckBox(id=wxID_FRAME1CHECKBOX2, label=u' ',
+              name='checkBox2', parent=self.panel3, pos=wx.Point(244, 63),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox2.SetValue(False)
+
+        self.checkBox3 = wx.CheckBox(id=wxID_FRAME1CHECKBOX3, label=u' ',
+              name='checkBox3', parent=self.panel3, pos=wx.Point(244, 87),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox3.SetValue(False)
+
+        self.checkBox4 = wx.CheckBox(id=wxID_FRAME1CHECKBOX4, label=u' ',
+              name='checkBox4', parent=self.panel3, pos=wx.Point(216, 360),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox4.SetValue(False)
+
+        self.textCtrl10 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL10,
+              name='textCtrl10', parent=self.panel3, pos=wx.Point(384, 179),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl10.Bind(wx.EVT_KEY_UP, self.OnTextCtrl10KeyUp)
+
+        self.textCtrl11 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL11,
+              name='textCtrl11', parent=self.panel3, pos=wx.Point(384, 203),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl11.Bind(wx.EVT_KEY_UP, self.OnTextCtrl11KeyUp)
+
+        self.textCtrl12 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL12,
+              name='textCtrl12', parent=self.panel3, pos=wx.Point(384, 227),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl12.Bind(wx.EVT_KEY_UP, self.OnTextCtrl12KeyUp)
+
+        self.textCtrl13 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL13,
+              name='textCtrl13', parent=self.panel3, pos=wx.Point(384, 251),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl13.Bind(wx.EVT_KEY_UP, self.OnTextCtrl13KeyUp)
+
+        self.textCtrl14 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL14,
+              name='textCtrl14', parent=self.panel3, pos=wx.Point(384, 275),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl14.Bind(wx.EVT_KEY_UP, self.OnTextCtrl14KeyUp)
+
+        self.textCtrl15 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL15,
+              name='textCtrl15', parent=self.panel3, pos=wx.Point(482, 354),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl15.Bind(wx.EVT_KEY_UP, self.OnTextCtrl15KeyUp)
+
+        self.staticText38 = wx.StaticText(id=wxID_FRAME1STATICTEXT38,
+              label=u'Processor Accelerator ', name='staticText38',
+              parent=self.panel3, pos=wx.Point(104, 416), size=wx.Size(109, 13),
+              style=0)
+
+        self.staticText39 = wx.StaticText(id=wxID_FRAME1STATICTEXT39,
+              label=u'Parameter Address', name='staticText39',
+              parent=self.panel3, pos=wx.Point(104, 440), size=wx.Size(93, 13),
+              style=0)
+
+        self.staticText40 = wx.StaticText(id=wxID_FRAME1STATICTEXT40,
+              label=u'Return Address', name='staticText40', parent=self.panel3,
+              pos=wx.Point(104, 464), size=wx.Size(76, 13), style=0)
+
+        self.staticText41 = wx.StaticText(id=wxID_FRAME1STATICTEXT41,
+              label=u'Options/Button', name='staticText41', parent=self.panel3,
+              pos=wx.Point(104, 504), size=wx.Size(74, 13), style=0)
+
+        self.staticText42 = wx.StaticText(id=wxID_FRAME1STATICTEXT42,
+              label=u'Parameter Once', name='staticText42', parent=self.panel3,
+              pos=wx.Point(104, 528), size=wx.Size(79, 13), style=0)
+
+        self.staticText43 = wx.StaticText(id=wxID_FRAME1STATICTEXT43,
+              label=u'External Memory Router', name='staticText43',
+              parent=self.panel3, pos=wx.Point(104, 552), size=wx.Size(118, 13),
+              style=0)
+
+        self.textCtrl16 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL16,
+              name='textCtrl16', parent=self.panel3, pos=wx.Point(256, 432),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl16.Bind(wx.EVT_KEY_UP, self.OnTextCtrl16KeyUp)
+
+        self.textCtrl17 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL17,
+              name='textCtrl17', parent=self.panel3, pos=wx.Point(256, 464),
+              size=wx.Size(100, 21), style=0, value=u'')
+        self.textCtrl17.Bind(wx.EVT_KEY_UP, self.OnTextCtrl17KeyUp)
+
+        self.checkBox5 = wx.CheckBox(id=wxID_FRAME1CHECKBOX5, label=u'',
+              name='checkBox5', parent=self.panel3, pos=wx.Point(256, 528),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox5.SetValue(True)
+
+        self.checkBox6 = wx.CheckBox(id=wxID_FRAME1CHECKBOX6, label=u'',
+              name='checkBox6', parent=self.panel3, pos=wx.Point(256, 552),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox6.SetValue(False)
+
+        self.button5 = wx.Button(id=wxID_FRAME1BUTTON5, label=u'Synthesis',
+              name='button5', parent=self.panel3, pos=wx.Point(336, 592),
+              size=wx.Size(96, 23), style=0)
 
         self._init_coll_notebook1_Pages(self.notebook1)
 
@@ -697,6 +920,38 @@ class Frame1(wx.Frame):
 
     def OnTextCtrl9KeyUp(self, event):
         self.check_float(self.textCtrl9)
+        event.Skip()
+
+    def OnTextCtrl10KeyUp(self, event):
+        self.check_integer(self.textCtrl10)
+        event.Skip()
+
+    def OnTextCtrl11KeyUp(self, event):
+        self.check_integer(self.textCtrl11)
+        event.Skip()
+
+    def OnTextCtrl12KeyUp(self, event):
+        self.check_integer(self.textCtrl12)
+        event.Skip()
+
+    def OnTextCtrl13KeyUp(self, event):
+        self.check_integer(self.textCtrl13)
+        event.Skip()
+
+    def OnTextCtrl14KeyUp(self, event):
+        self.check_integer(self.textCtrl14)
+        event.Skip()
+
+    def OnTextCtrl15KeyUp(self, event):
+        self.check_integer(self.textCtrl15)
+        event.Skip()
+
+    def OnTextCtrl16KeyUp(self, event):
+        self.check_float(self.textCtrl16)
+        event.Skip()
+
+    def OnTextCtrl17KeyUp(self, event):
+        self.check_float(self.textCtrl17)
         event.Skip()
 
 
