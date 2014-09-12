@@ -9,56 +9,36 @@ def create(parent):
 
 # 定义所用到的所有的控件的id
 [wxID_FRAME1, wxID_FRAME1BUTTON1, wxID_FRAME1BUTTON2, wxID_FRAME1BUTTON3, 
- wxID_FRAME1BUTTON4, wxID_FRAME1CTESTBENCH_BTN, wxID_FRAME1CTESTBENCH_FILE, 
- wxID_FRAME1ENALBE_PIPELINING, wxID_FRAME1EXIT_BTN, wxID_FRAME1GO_BTN, 
- wxID_FRAME1HWSRC_BTN, wxID_FRAME1HWSRC_FILE, wxID_FRAME1LISTBOX1, 
- wxID_FRAME1LISTBOX2, wxID_FRAME1LISTBOX3, wxID_FRAME1LLVMBUID_BTN, 
- wxID_FRAME1LLVMBUID_FILE, wxID_FRAME1NOTEBOOK1, wxID_FRAME1PANEL1, 
- wxID_FRAME1PANEL2, wxID_FRAME1PANEL3, wxID_FRAME1PANEL4, wxID_FRAME1SAMA_BTN, 
- wxID_FRAME1SAMA_FILE, wxID_FRAME1SOURCE_BTN, wxID_FRAME1SOURCE_FILE, 
- wxID_FRAME1STATICTEXT1, wxID_FRAME1STATICTEXT10, wxID_FRAME1STATICTEXT11, 
- wxID_FRAME1STATICTEXT12, wxID_FRAME1STATICTEXT13, wxID_FRAME1STATICTEXT14, 
- wxID_FRAME1STATICTEXT15, wxID_FRAME1STATICTEXT2, wxID_FRAME1STATICTEXT3, 
- wxID_FRAME1STATICTEXT4, wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT6, 
- wxID_FRAME1STATICTEXT7, wxID_FRAME1STATICTEXT8, wxID_FRAME1STATICTEXT9, 
- wxID_FRAME1TEXTCTRL1, wxID_FRAME1TEXTCTRL10, wxID_FRAME1TEXTCTRL2, 
- wxID_FRAME1TEXTCTRL3, wxID_FRAME1TEXTCTRL4, wxID_FRAME1TEXTCTRL5, 
- wxID_FRAME1TEXTCTRL6, wxID_FRAME1TEXTCTRL7, wxID_FRAME1TEXTCTRL8, 
- wxID_FRAME1TEXTCTRL9, wxID_FRAME1WORK_BTN, wxID_FRAME1WORK_DIR, 
-] = [wx.NewId() for _init_ctrls in range(53)]
+ wxID_FRAME1BUTTON4, wxID_FRAME1CHECKBOX1, wxID_FRAME1C_COURCE_CODE_BTN, 
+ wxID_FRAME1C_SOURCE_CODE_LABEL, wxID_FRAME1C_SOURCE_CODE_TEXT, 
+ wxID_FRAME1C_TESTBENCH_BTN, wxID_FRAME1C_TESTBENCH_LABEL, 
+ wxID_FRAME1C_TESTBENCH_TEXT, wxID_FRAME1GO_BTN, wxID_FRAME1LISTBOX1, 
+ wxID_FRAME1LISTBOX2, wxID_FRAME1LISTBOX3, wxID_FRAME1LLVM_BUILD_PATH_BTN, 
+ wxID_FRAME1LLVM_BUILD_PATH_LABEL, wxID_FRAME1LLVM_BUILD_PATH_TEXT, 
+ wxID_FRAME1NOTEBOOK1, wxID_FRAME1PANEL1, wxID_FRAME1PANEL10, 
+ wxID_FRAME1PANEL11, wxID_FRAME1PANEL2, wxID_FRAME1PANEL3, wxID_FRAME1PANEL4, 
+ wxID_FRAME1PANEL5, wxID_FRAME1PANEL6, wxID_FRAME1PANEL7, wxID_FRAME1PANEL8, 
+ wxID_FRAME1PANEL9, wxID_FRAME1STATICTEXT1, wxID_FRAME1STATICTEXT10, 
+ wxID_FRAME1STATICTEXT11, wxID_FRAME1STATICTEXT12, wxID_FRAME1STATICTEXT13, 
+ wxID_FRAME1STATICTEXT14, wxID_FRAME1STATICTEXT15, wxID_FRAME1STATICTEXT16, 
+ wxID_FRAME1STATICTEXT17, wxID_FRAME1STATICTEXT18, wxID_FRAME1STATICTEXT19, 
+ wxID_FRAME1STATICTEXT2, wxID_FRAME1STATICTEXT3, wxID_FRAME1STATICTEXT4, 
+ wxID_FRAME1STATICTEXT5, wxID_FRAME1STATICTEXT6, wxID_FRAME1STATICTEXT7, 
+ wxID_FRAME1STATICTEXT8, wxID_FRAME1STATICTEXT9, wxID_FRAME1TEXTCTRL1, 
+ wxID_FRAME1TEXTCTRL2, wxID_FRAME1TEXTCTRL3, wxID_FRAME1TEXTCTRL4, 
+ wxID_FRAME1TEXTCTRL5, wxID_FRAME1TEXTCTRL6, wxID_FRAME1TEXTCTRL7, 
+ wxID_FRAME1TEXTCTRL8, wxID_FRAME1TEXTCTRL9, 
+] = [wx.NewId() for _init_ctrls in range(59)]
 
 
 # 主窗口的类描述
 class Frame1(wx.Frame):
 
-    # 以下代码是界面设计器生成的 不可轻易改动
 
     def _init_coll_gridSizer4_Items(self, parent):
         # generated method, don't edit
 
         parent.AddWindow(self.button4, 0, border=0, flag=wx.ALIGN_CENTER)
-
-    def _init_coll_gridSizer1_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddWindow(self.staticText13, 0, border=0, flag=wx.ALIGN_CENTER)
-        parent.AddWindow(self.staticText14, 0, border=0, flag=wx.ALIGN_CENTER)
-        parent.AddWindow(self.staticText15, 0, border=0, flag=wx.ALIGN_CENTER)
-
-    def _init_coll_gridSizer2_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddWindow(self.listBox1, 0, border=0, flag=wx.EXPAND)
-        parent.AddWindow(self.listBox2, 0, border=0, flag=wx.EXPAND)
-        parent.AddWindow(self.listBox3, 0, border=0, flag=wx.EXPAND)
-
-    def _init_coll_boxSizer1_Items(self, parent):
-        # generated method, don't edit
-
-        parent.AddSizer(self.gridSizer1, 0, border=0, flag=wx.EXPAND)
-        parent.AddSizer(self.gridSizer2, 10, border=0, flag=wx.EXPAND)
-        parent.AddSizer(self.gridSizer3, 0, border=0, flag=wx.EXPAND)
-        parent.AddSizer(self.gridSizer4, 0, border=0, flag=wx.EXPAND)
 
     def _init_coll_gridSizer3_Items(self, parent):
         # generated method, don't edit
@@ -67,15 +47,59 @@ class Frame1(wx.Frame):
         parent.AddWindow(self.button2, 0, border=0, flag=wx.ALIGN_CENTER)
         parent.AddWindow(self.button3, 0, border=0, flag=wx.ALIGN_CENTER)
 
+    def _init_coll_gridSizer2_Items(self, parent):
+        # generated method, don't edit
+
+        parent.AddWindow(self.listBox1, 0, border=0, flag=wx.EXPAND)
+        parent.AddWindow(self.listBox2, 0, border=0, flag=wx.EXPAND)
+        parent.AddWindow(self.listBox3, 0, border=0, flag=wx.EXPAND)
+
+    def _init_coll_gridSizer5_Items(self, parent):
+        # generated method, don't edit
+
+        parent.AddWindow(self.staticText12, 0, border=0, flag=wx.ALIGN_CENTER)
+
+    def _init_coll_gridSizer1_Items(self, parent):
+        # generated method, don't edit
+
+        parent.AddWindow(self.staticText13, 0, border=0, flag=wx.ALIGN_CENTER)
+        parent.AddWindow(self.staticText14, 0, border=0, flag=wx.ALIGN_CENTER)
+        parent.AddWindow(self.staticText15, 0, border=0, flag=wx.ALIGN_CENTER)
+
+    def _init_coll_boxSizer1_Items(self, parent):
+        # generated method, don't edit
+
+        parent.AddSizer(self.gridSizer5, 0, border=0, flag=0)
+        parent.AddSizer(self.gridSizer1, 0, border=0, flag=wx.EXPAND)
+        parent.AddSizer(self.gridSizer2, 10, border=0, flag=wx.EXPAND)
+        parent.AddSizer(self.gridSizer3, 0, border=0, flag=wx.EXPAND)
+        parent.AddSizer(self.gridSizer4, 0, border=0, flag=wx.EXPAND)
+
     def _init_coll_notebook1_Pages(self, parent):
         # generated method, don't edit
 
-        parent.AddPage(imageId=-1, page=self.panel1, select=True,
-              text=u'Config_Ctrl')
-        parent.AddPage(imageId=-1, page=self.panel2, select=False,
-              text=u'Codes')
-        parent.AddPage(imageId=-1, page=self.panel3, select=False, text=u'RSL')
-        parent.AddPage(imageId=-1, page=self.panel4, select=False, text=u'SIM')
+        parent.AddPage(imageId=-1, page=self.panel1, select=False,
+              text=u'Setup')
+        parent.AddPage(imageId=-1, page=self.panel2, select=True,
+              text=u'Cross Cor')
+        parent.AddPage(imageId=-1, page=self.panel3, select=False,
+              text=u'Archi Spec')
+        parent.AddPage(imageId=-1, page=self.panel4, select=False,
+              text=u'IO Archi Spec')
+        parent.AddPage(imageId=-1, page=self.panel5, select=False,
+              text=u'Memory Archi Spec')
+        parent.AddPage(imageId=-1, page=self.panel6, select=False,
+              text=u'Simulator')
+        parent.AddPage(imageId=-1, page=self.panel7, select=False,
+              text=u'Driver Trace')
+        parent.AddPage(imageId=-1, page=self.panel8, select=False,
+              text=u'Logic')
+        parent.AddPage(imageId=-1, page=self.panel9, select=False,
+              text=u'Parallel State Machine')
+        parent.AddPage(imageId=-1, page=self.panel10, select=False,
+              text=u'Power')
+        parent.AddPage(imageId=-1, page=self.panel11, select=False,
+              text=u'Memory Access')
 
     def _init_sizers(self):
         # generated method, don't edit
@@ -89,312 +113,389 @@ class Frame1(wx.Frame):
 
         self.gridSizer4 = wx.GridSizer(cols=3, hgap=0, rows=1, vgap=0)
 
+        self.gridSizer5 = wx.GridSizer(cols=1, hgap=0, rows=1, vgap=0)
+
         self._init_coll_boxSizer1_Items(self.boxSizer1)
         self._init_coll_gridSizer1_Items(self.gridSizer1)
         self._init_coll_gridSizer2_Items(self.gridSizer2)
         self._init_coll_gridSizer3_Items(self.gridSizer3)
         self._init_coll_gridSizer4_Items(self.gridSizer4)
+        self._init_coll_gridSizer5_Items(self.gridSizer5)
 
         self.panel2.SetSizer(self.boxSizer1)
 
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
-              pos=wx.Point(166, 22), size=wx.Size(900, 700),
+              pos=wx.Point(540, 137), size=wx.Size(900, 700),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
         self.SetClientSize(wx.Size(884, 662))
         self.SetMinSize(wx.Size(888, 660))
         self.SetToolTipString(u'')
+        self.SetHelpText(u'')
 
         self.notebook1 = wx.Notebook(id=wxID_FRAME1NOTEBOOK1, name='notebook1',
               parent=self, pos=wx.Point(0, 0), size=wx.Size(884, 662), style=0)
         self.notebook1.SetToolTipString(u'')
 
         self.panel1 = wx.Panel(id=wxID_FRAME1PANEL1, name='panel1',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 635),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
               style=wx.TAB_TRAVERSAL)
         self.panel1.SetToolTipString(u'')
 
         self.panel2 = wx.Panel(id=wxID_FRAME1PANEL2, name='panel2',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 635),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
               style=wx.TAB_TRAVERSAL)
         self.panel2.SetToolTipString(u'')
 
         self.panel3 = wx.Panel(id=wxID_FRAME1PANEL3, name='panel3',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 635),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
               style=wx.TAB_TRAVERSAL)
         self.panel3.SetToolTipString(u'')
 
         self.panel4 = wx.Panel(id=wxID_FRAME1PANEL4, name='panel4',
-              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 635),
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
               style=wx.TAB_TRAVERSAL)
         self.panel4.SetToolTipString(u'')
 
-        self.work_dir = wx.StaticText(id=wxID_FRAME1WORK_DIR,
-              label=u'No Work directory selected', name=u'work_dir',
-              parent=self.panel1, pos=wx.Point(64, 16), size=wx.Size(131, 13),
+        self.c_source_code_label = wx.StaticText(id=wxID_FRAME1C_SOURCE_CODE_LABEL,
+              label=u'C Source Code', name=u'c_source_code_label',
+              parent=self.panel1, pos=wx.Point(64, 64), size=wx.Size(72, 13),
               style=0)
-        self.work_dir.SetToolTipString(u'')
+        self.c_source_code_label.SetToolTipString(u'')
+        self.c_source_code_label.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC,
+              wx.NORMAL, False, u'Tahoma'))
 
-        self.llvmbuid_file = wx.StaticText(id=wxID_FRAME1LLVMBUID_FILE,
-              label=u'No LLVM Build selected', name=u'llvmbuid_file',
-              parent=self.panel1, pos=wx.Point(64, 48), size=wx.Size(109, 13),
+        self.c_testbench_label = wx.StaticText(id=wxID_FRAME1C_TESTBENCH_LABEL,
+              label=u'C TestBench', name=u'c_testbench_label',
+              parent=self.panel1, pos=wx.Point(64, 96), size=wx.Size(61, 13),
               style=0)
-        self.llvmbuid_file.SetToolTipString(u'')
+        self.c_testbench_label.SetToolTipString(u'')
+        self.c_testbench_label.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC,
+              wx.NORMAL, False, u'Tahoma'))
 
-        self.hwsrc_file = wx.StaticText(id=wxID_FRAME1HWSRC_FILE,
-              label=u'No hwSrc selected', name=u'hwsrc_file',
-              parent=self.panel1, pos=wx.Point(64, 80), size=wx.Size(89, 13),
+        self.llvm_build_path_label = wx.StaticText(id=wxID_FRAME1LLVM_BUILD_PATH_LABEL,
+              label=u'LLVM Build Path', name=u'llvm_build_path_label',
+              parent=self.panel1, pos=wx.Point(64, 128), size=wx.Size(76, 13),
               style=0)
-        self.hwsrc_file.SetToolTipString(u'')
-
-        self.source_file = wx.StaticText(id=wxID_FRAME1SOURCE_FILE,
-              label=u'No LLVM-linked source/cdfg.tcl selected',
-              name=u'source_file', parent=self.panel1, pos=wx.Point(64, 112),
-              size=wx.Size(190, 13), style=0)
-        self.source_file.SetToolTipString(u'')
-
-        self.ctestbench_file = wx.StaticText(id=wxID_FRAME1CTESTBENCH_FILE,
-              label=u'No C TestBench selected', name=u'ctestbench_file',
-              parent=self.panel1, pos=wx.Point(64, 144), size=wx.Size(120, 13),
-              style=0)
-        self.ctestbench_file.SetToolTipString(u'')
-
-        self.sama_file = wx.StaticText(id=wxID_FRAME1SAMA_FILE,
-              label=u'No SAMA selected', name=u'sama_file', parent=self.panel1,
-              pos=wx.Point(64, 176), size=wx.Size(88, 13), style=0)
-        self.sama_file.SetToolTipString(u'')
+        self.llvm_build_path_label.SetToolTipString(u'')
+        self.llvm_build_path_label.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC,
+              wx.NORMAL, False, u'Tahoma'))
 
         self.staticText1 = wx.StaticText(id=wxID_FRAME1STATICTEXT1,
-              label=u'Top Function Name', name='staticText1',
-              parent=self.panel1, pos=wx.Point(64, 208), size=wx.Size(93, 13),
+              label=u'Testbench Arguments', name='staticText1',
+              parent=self.panel1, pos=wx.Point(64, 208), size=wx.Size(106, 13),
               style=0)
         self.staticText1.SetToolTipString(u'')
+        self.staticText1.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText2 = wx.StaticText(id=wxID_FRAME1STATICTEXT2,
-              label=u'Optional Testbench Extemal Arguments', name='staticText2',
-              parent=self.panel1, pos=wx.Point(64, 240), size=wx.Size(190, 13),
+              label=u'Top Level Function', name='staticText2',
+              parent=self.panel1, pos=wx.Point(64, 240), size=wx.Size(91, 13),
               style=0)
         self.staticText2.SetToolTipString(u'')
+        self.staticText2.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText3 = wx.StaticText(id=wxID_FRAME1STATICTEXT3,
-              label=u'Parament Fetch', name='staticText3', parent=self.panel1,
-              pos=wx.Point(64, 272), size=wx.Size(77, 13), style=0)
+              label=u'Primary Clock Frequency (MHz)', name='staticText3',
+              parent=self.panel1, pos=wx.Point(64, 272), size=wx.Size(151, 13),
+              style=0)
         self.staticText3.SetToolTipString(u'')
+        self.staticText3.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText4 = wx.StaticText(id=wxID_FRAME1STATICTEXT4,
-              label=u'Ploc', name='staticText4', parent=self.panel1,
-              pos=wx.Point(64, 304), size=wx.Size(20, 13), style=0)
+              label=u'Area (um2)', name='staticText4', parent=self.panel1,
+              pos=wx.Point(64, 304), size=wx.Size(56, 13), style=0)
         self.staticText4.SetToolTipString(u'')
+        self.staticText4.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText5 = wx.StaticText(id=wxID_FRAME1STATICTEXT5,
-              label=u'Raddr', name='staticText5', parent=self.panel1,
-              pos=wx.Point(64, 336), size=wx.Size(30, 13), style=0)
+              label=u'Power (mW)', name='staticText5', parent=self.panel1,
+              pos=wx.Point(64, 336), size=wx.Size(61, 13), style=0)
         self.staticText5.SetToolTipString(u'')
-
-        self.enalbe_Pipelining = wx.CheckBox(id=wxID_FRAME1ENALBE_PIPELINING,
-              label=u'Enable Pipelining', name=u'enalbe_Pipelining',
-              parent=self.panel1, pos=wx.Point(64, 368), size=wx.Size(128, 13),
-              style=0)
-        self.enalbe_Pipelining.SetValue(False)
-        self.enalbe_Pipelining.SetToolTipString(u'')
+        self.staticText5.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText6 = wx.StaticText(id=wxID_FRAME1STATICTEXT6,
-              label=u'SW Piplining', name='staticText6', parent=self.panel1,
-              pos=wx.Point(64, 400), size=wx.Size(58, 13), style=0)
+              label=u'Latency (#cycles)', name='staticText6',
+              parent=self.panel1, pos=wx.Point(64, 368), size=wx.Size(88, 13),
+              style=0)
         self.staticText6.SetToolTipString(u'')
+        self.staticText6.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText7 = wx.StaticText(id=wxID_FRAME1STATICTEXT7,
-              label=u'HW Constraints', name='staticText7', parent=self.panel1,
-              pos=wx.Point(64, 432), size=wx.Size(76, 13), style=0)
+              label=u'Throughtput (#cycles)', name='staticText7',
+              parent=self.panel1, pos=wx.Point(64, 400), size=wx.Size(109, 13),
+              style=0)
         self.staticText7.SetToolTipString(u'')
+        self.staticText7.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText8 = wx.StaticText(id=wxID_FRAME1STATICTEXT8,
-              label=u'Loop Unrolling', name='staticText8', parent=self.panel1,
-              pos=wx.Point(64, 464), size=wx.Size(68, 13), style=0)
+              label=u'Max. of Cycles', name='staticText8', parent=self.panel1,
+              pos=wx.Point(64, 432), size=wx.Size(73, 13), style=0)
         self.staticText8.SetToolTipString(u'')
+        self.staticText8.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText9 = wx.StaticText(id=wxID_FRAME1STATICTEXT9,
-              label=u'Operating Frequency', name='staticText9',
-              parent=self.panel1, pos=wx.Point(64, 496), size=wx.Size(103, 13),
+              label=u'Clock1 Frequency (MHz)', name='staticText9',
+              parent=self.panel1, pos=wx.Point(64, 496), size=wx.Size(117, 13),
               style=0)
         self.staticText9.SetToolTipString(u'')
+        self.staticText9.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText10 = wx.StaticText(id=wxID_FRAME1STATICTEXT10,
               label=u'Performance Margin', name='staticText10',
-              parent=self.panel1, pos=wx.Point(64, 528), size=wx.Size(97, 13),
+              parent=self.panel1, pos=wx.Point(64, 560), size=wx.Size(98, 13),
               style=0)
         self.staticText10.SetToolTipString(u'')
+        self.staticText10.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
-        self.go_btn = wx.Button(id=wxID_FRAME1GO_BTN, label=u'Go',
-              name=u'go_btn', parent=self.panel1, pos=wx.Point(80, 560),
+        self.go_btn = wx.Button(id=wxID_FRAME1GO_BTN, label=u'Compile',
+              name=u'go_btn', parent=self.panel1, pos=wx.Point(264, 600),
               size=wx.Size(75, 23), style=0)
         self.go_btn.SetToolTipString(u'')
         self.go_btn.Bind(wx.EVT_BUTTON, self.OnGo_btnButton,
               id=wxID_FRAME1GO_BTN)
 
-        self.exit_btn = wx.Button(id=wxID_FRAME1EXIT_BTN, label=u'Exit',
-              name=u'exit_btn', parent=self.panel1, pos=wx.Point(392, 560),
-              size=wx.Size(75, 23), style=0)
-        self.exit_btn.SetToolTipString(u'')
-        self.exit_btn.Bind(wx.EVT_BUTTON, self.OnExit_btnButton,
-              id=wxID_FRAME1EXIT_BTN)
+        self.llvm_build_path_btn = wx.Button(id=wxID_FRAME1LLVM_BUILD_PATH_BTN,
+              label=u'Browser', name=u'llvm_build_path_btn', parent=self.panel1,
+              pos=wx.Point(432, 125), size=wx.Size(75, 23), style=0)
+        self.llvm_build_path_btn.SetToolTipString(u'')
+        self.llvm_build_path_btn.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC,
+              wx.NORMAL, False, u'Tahoma'))
+        self.llvm_build_path_btn.Bind(wx.EVT_BUTTON,
+              self.OnLlvm_build_path_btnButton,
+              id=wxID_FRAME1LLVM_BUILD_PATH_BTN)
 
-        self.sama_btn = wx.Button(id=wxID_FRAME1SAMA_BTN,
-              label=u'Optional SAMA FILE', name=u'sama_btn', parent=self.panel1,
-              pos=wx.Point(352, 168), size=wx.Size(160, 23), style=0)
-        self.sama_btn.SetToolTipString(u'')
-        self.sama_btn.Bind(wx.EVT_BUTTON, self.OnSama_btnButton,
-              id=wxID_FRAME1SAMA_BTN)
+        self.c_cource_code_btn = wx.Button(id=wxID_FRAME1C_COURCE_CODE_BTN,
+              label=u'Browser', name=u'c_cource_code_btn', parent=self.panel1,
+              pos=wx.Point(432, 61), size=wx.Size(72, 23), style=0)
+        self.c_cource_code_btn.SetToolTipString(u'')
+        self.c_cource_code_btn.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC,
+              wx.NORMAL, False, u'Tahoma'))
+        self.c_cource_code_btn.SetHelpText(u'')
+        self.c_cource_code_btn.Bind(wx.EVT_BUTTON,
+              self.OnC_cource_code_btnButton, id=wxID_FRAME1C_COURCE_CODE_BTN)
 
-        self.ctestbench_btn = wx.Button(id=wxID_FRAME1CTESTBENCH_BTN,
-              label=u'C Testbench', name=u'ctestbench_btn', parent=self.panel1,
-              pos=wx.Point(352, 136), size=wx.Size(120, 23), style=0)
-        self.ctestbench_btn.SetToolTipString(u'')
-        self.ctestbench_btn.Bind(wx.EVT_BUTTON, self.OnCtestbench_btnButton,
-              id=wxID_FRAME1CTESTBENCH_BTN)
-
-        self.source_btn = wx.Button(id=wxID_FRAME1SOURCE_BTN,
-              label=u'LLVM-linked source/cdfg.tcl', name=u'source_btn',
-              parent=self.panel1, pos=wx.Point(352, 104), size=wx.Size(200, 23),
-              style=0)
-        self.source_btn.SetToolTipString(u'')
-        self.source_btn.Bind(wx.EVT_BUTTON, self.OnSource_btnButton,
-              id=wxID_FRAME1SOURCE_BTN)
-
-        self.hwsrc_btn = wx.Button(id=wxID_FRAME1HWSRC_BTN, label=u'hwSrc',
-              name=u'hwsrc_btn', parent=self.panel1, pos=wx.Point(352, 72),
-              size=wx.Size(75, 23), style=0)
-        self.hwsrc_btn.SetToolTipString(u'')
-        self.hwsrc_btn.Bind(wx.EVT_BUTTON, self.OnHwsrc_btnButton,
-              id=wxID_FRAME1HWSRC_BTN)
-
-        self.work_btn = wx.Button(id=wxID_FRAME1WORK_BTN, label=u'Work',
-              name=u'work_btn', parent=self.panel1, pos=wx.Point(352, 8),
-              size=wx.Size(75, 23), style=0)
-        self.work_btn.SetToolTipString(u'')
-        self.work_btn.Bind(wx.EVT_BUTTON, self.OnWork_btnButton,
-              id=wxID_FRAME1WORK_BTN)
-
-        self.llvmbuid_btn = wx.Button(id=wxID_FRAME1LLVMBUID_BTN,
-              label=u'llvmbuild', name=u'llvmbuid_btn', parent=self.panel1,
-              pos=wx.Point(352, 40), size=wx.Size(75, 23), style=0)
-        self.llvmbuid_btn.SetToolTipString(u'')
-        self.llvmbuid_btn.Bind(wx.EVT_BUTTON, self.OnLlvmbuid_btnButton,
-              id=wxID_FRAME1LLVMBUID_BTN)
+        self.c_testbench_btn = wx.Button(id=wxID_FRAME1C_TESTBENCH_BTN,
+              label=u'Browser', name=u'c_testbench_btn', parent=self.panel1,
+              pos=wx.Point(432, 93), size=wx.Size(75, 23), style=0)
+        self.c_testbench_btn.SetToolTipString(u'')
+        self.c_testbench_btn.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
+        self.c_testbench_btn.Bind(wx.EVT_BUTTON, self.OnC_testbench_btnButton,
+              id=wxID_FRAME1C_TESTBENCH_BTN)
 
         self.textCtrl1 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL1, name='textCtrl1',
-              parent=self.panel1, pos=wx.Point(344, 208), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 204), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl1.SetToolTipString(u'')
+        self.textCtrl1.SetFont(wx.Font(8, wx.SWISS, wx.NORMAL, wx.NORMAL, False,
+              u'Tahoma'))
+        self.textCtrl1.Bind(wx.EVT_KEY_UP, self.OnTextCtrl1KeyUp)
 
         self.textCtrl2 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL2, name='textCtrl2',
-              parent=self.panel1, pos=wx.Point(344, 240), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 236), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl2.SetToolTipString(u'')
+        self.textCtrl2.Bind(wx.EVT_KEY_UP, self.OnTextCtrl2KeyUp)
 
         self.textCtrl3 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL3, name='textCtrl3',
-              parent=self.panel1, pos=wx.Point(344, 272), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 268), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl3.SetToolTipString(u'')
+        self.textCtrl3.Bind(wx.EVT_KEY_UP, self.OnTextCtrl3KeyUp)
 
         self.textCtrl4 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL4, name='textCtrl4',
-              parent=self.panel1, pos=wx.Point(344, 304), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 300), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl4.SetToolTipString(u'')
+        self.textCtrl4.Bind(wx.EVT_KEY_UP, self.OnTextCtrl4KeyUp)
 
         self.textCtrl5 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL5, name='textCtrl5',
-              parent=self.panel1, pos=wx.Point(344, 336), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 332), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl5.SetToolTipString(u'')
+        self.textCtrl5.Bind(wx.EVT_KEY_UP, self.OnTextCtrl5KeyUp)
 
         self.textCtrl6 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL6, name='textCtrl6',
-              parent=self.panel1, pos=wx.Point(344, 400), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 364), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl6.SetToolTipString(u'')
+        self.textCtrl6.Bind(wx.EVT_KEY_UP, self.OnTextCtrl6KeyUp)
 
         self.textCtrl7 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL7, name='textCtrl7',
-              parent=self.panel1, pos=wx.Point(344, 432), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 396), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl7.SetToolTipString(u'')
+        self.textCtrl7.Bind(wx.EVT_KEY_UP, self.OnTextCtrl7KeyUp)
 
         self.textCtrl8 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL8, name='textCtrl8',
-              parent=self.panel1, pos=wx.Point(344, 464), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 428), size=wx.Size(176, 21),
               style=0, value=u'')
         self.textCtrl8.SetToolTipString(u'')
+        self.textCtrl8.Bind(wx.EVT_KEY_UP, self.OnTextCtrl8KeyUp)
 
         self.textCtrl9 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL9, name='textCtrl9',
-              parent=self.panel1, pos=wx.Point(344, 496), size=wx.Size(176, 21),
+              parent=self.panel1, pos=wx.Point(307, 492), size=wx.Size(176, 21),
               style=0, value=u'')
-
-        self.textCtrl10 = wx.TextCtrl(id=wxID_FRAME1TEXTCTRL10,
-              name='textCtrl10', parent=self.panel1, pos=wx.Point(344, 528),
-              size=wx.Size(176, 21), style=0, value=u'')
-        self.textCtrl10.SetToolTipString(u'')
-
-        self.staticText11 = wx.StaticText(id=wxID_FRAME1STATICTEXT11,
-              label=u'MHz', name='staticText11', parent=self.panel1,
-              pos=wx.Point(528, 502), size=wx.Size(32, 13), style=0)
-        self.staticText11.SetToolTipString(u'')
-
-        self.staticText12 = wx.StaticText(id=wxID_FRAME1STATICTEXT12,
-              label=u'%', name='staticText12', parent=self.panel1,
-              pos=wx.Point(528, 534), size=wx.Size(11, 16), style=0)
-        self.staticText12.SetToolTipString(u'')
+        self.textCtrl9.Bind(wx.EVT_KEY_UP, self.OnTextCtrl9KeyUp)
 
         self.staticText13 = wx.StaticText(id=wxID_FRAME1STATICTEXT13,
               label=u'C Source', name='staticText13', parent=self.panel2,
-              pos=wx.Point(115, 0), size=wx.Size(61, 13), style=0)
+              pos=wx.Point(115, 19), size=wx.Size(61, 13), style=0)
+        self.staticText13.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText14 = wx.StaticText(id=wxID_FRAME1STATICTEXT14,
-              label=u'LLVM IR', name='staticText14', parent=self.panel2,
-              pos=wx.Point(407, 0), size=wx.Size(61, 13), style=0)
+              label=u'CDFG', name='staticText14', parent=self.panel2,
+              pos=wx.Point(407, 19), size=wx.Size(61, 13), style=0)
+        self.staticText14.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.staticText15 = wx.StaticText(id=wxID_FRAME1STATICTEXT15,
-              label=u'A2C HW', name='staticText15', parent=self.panel2,
-              pos=wx.Point(699, 0), size=wx.Size(61, 13), style=0)
+              label=u'RTL', name='staticText15', parent=self.panel2,
+              pos=wx.Point(699, 19), size=wx.Size(61, 13), style=0)
+        self.staticText15.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL,
+              False, u'Tahoma'))
 
         self.listBox1 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX1,
-              name='listBox1', parent=self.panel2, pos=wx.Point(0, 13),
-              size=wx.Size(292, 571), style=wx.LB_HSCROLL)
+              name='listBox1', parent=self.panel2, pos=wx.Point(0, 32),
+              size=wx.Size(292, 553), style=wx.LB_HSCROLL)
         self.listBox1.Bind(wx.EVT_LISTBOX, self.OnListBox1Listbox,
               id=wxID_FRAME1LISTBOX1)
 
         self.listBox2 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX2,
-              name='listBox2', parent=self.panel2, pos=wx.Point(292, 13),
-              size=wx.Size(292, 571), style=wx.LB_HSCROLL)
+              name='listBox2', parent=self.panel2, pos=wx.Point(292, 32),
+              size=wx.Size(292, 553), style=wx.LB_HSCROLL)
         self.listBox2.Bind(wx.EVT_LISTBOX, self.OnListBox2Listbox,
               id=wxID_FRAME1LISTBOX2)
 
         self.listBox3 = wx.ListBox(choices=[], id=wxID_FRAME1LISTBOX3,
-              name='listBox3', parent=self.panel2, pos=wx.Point(584, 13),
-              size=wx.Size(292, 571), style=wx.LB_HSCROLL)
+              name='listBox3', parent=self.panel2, pos=wx.Point(584, 32),
+              size=wx.Size(292, 553), style=wx.LB_HSCROLL)
         self.listBox3.Bind(wx.EVT_LISTBOX, self.OnListBox3Listbox,
               id=wxID_FRAME1LISTBOX3)
 
         self.button1 = wx.Button(id=wxID_FRAME1BUTTON1, label=u'Open',
-              name='button1', parent=self.panel2, pos=wx.Point(108, 584),
+              name='button1', parent=self.panel2, pos=wx.Point(108, 585),
               size=wx.Size(75, 23), style=0)
+        self.button1.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
         self.button1.Bind(wx.EVT_BUTTON, self.OnButton1Button,
               id=wxID_FRAME1BUTTON1)
 
         self.button2 = wx.Button(id=wxID_FRAME1BUTTON2, label=u'Open',
-              name='button2', parent=self.panel2, pos=wx.Point(400, 584),
+              name='button2', parent=self.panel2, pos=wx.Point(400, 585),
               size=wx.Size(75, 23), style=0)
+        self.button2.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
         self.button2.Bind(wx.EVT_BUTTON, self.OnButton2Button,
               id=wxID_FRAME1BUTTON2)
 
         self.button3 = wx.Button(id=wxID_FRAME1BUTTON3, label=u'Open',
-              name='button3', parent=self.panel2, pos=wx.Point(692, 584),
+              name='button3', parent=self.panel2, pos=wx.Point(692, 585),
               size=wx.Size(75, 23), style=0)
+        self.button3.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
         self.button3.Bind(wx.EVT_BUTTON, self.OnButton3Button,
               id=wxID_FRAME1BUTTON3)
 
         self.button4 = wx.Button(id=wxID_FRAME1BUTTON4, label=u'Xref File Open',
-              name='button4', parent=self.panel2, pos=wx.Point(89, 607),
+              name='button4', parent=self.panel2, pos=wx.Point(89, 608),
               size=wx.Size(114, 28), style=0)
+        self.button4.SetFont(wx.Font(8, wx.SWISS, wx.ITALIC, wx.NORMAL, False,
+              u'Tahoma'))
         self.button4.Bind(wx.EVT_BUTTON, self.OnButton4Button,
               id=wxID_FRAME1BUTTON4)
+
+        self.panel5 = wx.Panel(id=wxID_FRAME1PANEL5, name='panel5',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.panel6 = wx.Panel(id=wxID_FRAME1PANEL6, name='panel6',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.panel7 = wx.Panel(id=wxID_FRAME1PANEL7, name='panel7',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.panel8 = wx.Panel(id=wxID_FRAME1PANEL8, name='panel8',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.panel9 = wx.Panel(id=wxID_FRAME1PANEL9, name='panel9',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.panel10 = wx.Panel(id=wxID_FRAME1PANEL10, name='panel10',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.panel11 = wx.Panel(id=wxID_FRAME1PANEL11, name='panel11',
+              parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(876, 636),
+              style=wx.TAB_TRAVERSAL)
+
+        self.c_source_code_text = wx.TextCtrl(id=wxID_FRAME1C_SOURCE_CODE_TEXT,
+              name=u'c_source_code_text', parent=self.panel1, pos=wx.Point(160,
+              61), size=wx.Size(256, 21), style=0, value=u'')
+
+        self.c_testbench_text = wx.TextCtrl(id=wxID_FRAME1C_TESTBENCH_TEXT,
+              name=u'c_testbench_text', parent=self.panel1, pos=wx.Point(160,
+              93), size=wx.Size(256, 21), style=0, value=u'')
+
+        self.llvm_build_path_text = wx.TextCtrl(id=wxID_FRAME1LLVM_BUILD_PATH_TEXT,
+              name=u'llvm_build_path_text', parent=self.panel1,
+              pos=wx.Point(160, 125), size=wx.Size(256, 21), style=0,
+              value=u'')
+
+        self.staticText16 = wx.StaticText(id=wxID_FRAME1STATICTEXT16,
+              label=u'File/Directory Selection', name='staticText16',
+              parent=self.panel1, pos=wx.Point(64, 32), size=wx.Size(111, 13),
+              style=0)
+
+        self.staticText17 = wx.StaticText(id=wxID_FRAME1STATICTEXT17,
+              label=u'InLine Data Entries', name='staticText17',
+              parent=self.panel1, pos=wx.Point(64, 176), size=wx.Size(92, 13),
+              style=0)
+
+        self.staticText18 = wx.StaticText(id=wxID_FRAME1STATICTEXT18,
+              label=u'Other relevant clocks for inputs ', name='staticText18',
+              parent=self.panel1, pos=wx.Point(64, 464), size=wx.Size(155, 13),
+              style=0)
+
+        self.staticText19 = wx.StaticText(id=wxID_FRAME1STATICTEXT19,
+              label=u'Options/Buttton', name='staticText19', parent=self.panel1,
+              pos=wx.Point(64, 528), size=wx.Size(78, 13), style=0)
+
+        self.checkBox1 = wx.CheckBox(id=wxID_FRAME1CHECKBOX1, label=u'',
+              name='checkBox1', parent=self.panel1, pos=wx.Point(311, 559),
+              size=wx.Size(70, 13), style=0)
+        self.checkBox1.SetValue(True)
+
+        self.staticText11 = wx.StaticText(id=wxID_FRAME1STATICTEXT11,
+              label=u'Design Setup/Configuration', name='staticText11',
+              parent=self.panel1, pos=wx.Point(224, 8), size=wx.Size(227, 19),
+              style=0)
+        self.staticText11.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
+
+        self.staticText12 = wx.StaticText(id=wxID_FRAME1STATICTEXT12,
+              label=u'                                                  Cross Correlation',
+              name='staticText12', parent=self.panel2, pos=wx.Point(0, 0),
+              size=wx.Size(504, 19), style=0)
+        self.staticText12.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
+              False, u'Tahoma'))
 
         self._init_coll_notebook1_Pages(self.notebook1)
 
@@ -405,13 +506,44 @@ class Frame1(wx.Frame):
         self._init_ctrls(parent)
 
 
-    def set_selected(self, file_label):
+    def set_selected(self, file_text):
         # 因为有多个按钮式选择文件功能，所以把选择文件的操作单独写成一个函数
         path = wx.FileSelector("Open")
         if path:
-            path = path.replace("\\", "/")
-            filename = path.split("/")[-1]
-            file_label.SetLabel(filename)
+            #path = path.replace("\\", "/")
+            #filename = path.split("/")[-1]
+            file_text.SetValue(path)
+            
+    
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ,."
+    integers = "0123456789"
+    floats = "0123456789."
+    
+    def check_string(self, textctrl):
+        s = textctrl.GetValue()
+        text = ""
+        print s
+        for c in s:
+            if str(c).upper() in self.chars:
+                text += c
+        textctrl.SetValue(text)
+    
+    def check_integer(self, textctrl):
+        text = ""
+        for c in textctrl.GetValue():
+            if str(c) in self.integers:
+                text += c
+        textctrl.SetValue(text)
+    
+    def check_float(self, textctrl):
+        text = ""
+        for c in textctrl.GetValue():
+            if str(c) in self.floats:
+                text += c
+        textctrl.SetValue(text)
+        
+            
+            
             
     def OnWork_btnButton(self, event):
         # 选择Work目录按钮，注意这里选择的是目录而不是文件
@@ -421,31 +553,6 @@ class Frame1(wx.Frame):
         self.work_dir.SetLabel(dirname)
         event.Skip()
         
-    def OnSama_btnButton(self, event):
-        # 选择文件
-        self.set_selected(self.sama_file)
-        event.Skip()
-
-    def OnCtestbench_btnButton(self, event):
-        # 选择文件
-        self.set_selected(self.ctestbench_file)
-        event.Skip()
-
-    def OnSource_btnButton(self, event):
-        # 选择文件
-        self.set_selected(self.source_file)
-        event.Skip()
-
-    def OnHwsrc_btnButton(self, event):
-        # 选择文件
-        self.set_selected(self.hwsrc_file)
-        event.Skip()
-
-
-    def OnLlvmbuid_btnButton(self, event):
-        # 选择文件
-        self.set_selected(self.llvmbuid_file)
-        event.Skip()
 
     def OnGo_btnButton(self, event):
         # Go按钮 暂时没有功能
@@ -537,4 +644,61 @@ class Frame1(wx.Frame):
         self.listBox1.Select(self.xref1[index])
         self.listBox2.Select(self.xref2[index])
         event.Skip()
+
+
+    def OnC_cource_code_btnButton(self, event):
+        # 选择文件
+        self.set_selected(self.c_source_code_text)
+        event.Skip()
+
+    def OnC_testbench_btnButton(self, event):
+        # 选择文件
+        self.set_selected(self.c_testbench_text)
+        event.Skip()
+
+
+    def OnLlvm_build_path_btnButton(self, event):
+        # 选择文件
+        self.set_selected(self.llvm_build_path_text)
+        event.Skip()
+
+
+    def OnTextCtrl1KeyUp(self, event):
+        self.check_string(self.textCtrl1)
+        event.Skip()
+
+    def OnTextCtrl2KeyUp(self, event):
+        self.check_string(self.textCtrl2)
+        event.Skip()
+
+    def OnTextCtrl3KeyUp(self, event):
+        self.check_float(self.textCtrl3)
+        event.Skip()
+
+    def OnTextCtrl4KeyUp(self, event):
+        self.check_float(self.textCtrl4)
+        event.Skip()
+
+    def OnTextCtrl5KeyUp(self, event):
+        self.check_float(self.textCtrl5)
+        event.Skip()
+
+    def OnTextCtrl6KeyUp(self, event):
+        self.check_integer(self.textCtrl6)
+        event.Skip()
+
+    def OnTextCtrl7KeyUp(self, event):
+        self.check_integer(self.textCtrl7)
+        event.Skip()
+
+    def OnTextCtrl8KeyUp(self, event):
+        self.check_integer(self.textCtrl8)
+        event.Skip()
+
+    def OnTextCtrl9KeyUp(self, event):
+        self.check_float(self.textCtrl9)
+        event.Skip()
+
+
+
 
