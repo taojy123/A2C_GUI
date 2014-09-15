@@ -1,18 +1,18 @@
-#coding=utf8
+#coding=gbk
 #!/usr/bin/env python
 #Boa:App:BoaApp
 
-# ============ è¿™æ˜¯è½¯ä»¶çš„ä¸»å…¥å£ å¯åŠ¨å™¨ =================
+# ============ ÕâÊÇÈí¼şµÄÖ÷Èë¿Ú Æô¶¯Æ÷ =================
 
 import wx
 
 import Frame1
 
-# ä½¿ç”¨äº†ä¸€ä¸ªçª—ä½“ Frame1
+# Ê¹ÓÃÁËÒ»¸ö´°Ìå Frame1
 modules ={'Frame1': [1, 'Main frame of Application', u'Frame1.py']}
 
 
-# ä¸»Appå°±æ˜¯æ‰“å¼€å¹¶æ˜¾ç¤ºFrame1å†…å®¹
+# Ö÷App¾ÍÊÇ´ò¿ª²¢ÏÔÊ¾Frame1ÄÚÈİ
 class BoaApp(wx.App):
     def OnInit(self):
         self.main = Frame1.create(None)
@@ -20,7 +20,7 @@ class BoaApp(wx.App):
         self.SetTopWindow(self.main)
         return True
 
-# ä¸»å‡½æ•° å¯åŠ¨App
+# Ö÷º¯Êı Æô¶¯App
 def main():
     application = BoaApp(0)
     application.MainLoop()
