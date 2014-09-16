@@ -1,13 +1,13 @@
-#coding=gbk
+#coding=utf8
 #Boa:Frame:Frame1
 
-# ============== ÕâÀïÊÇÈí¼şµÄÖ÷Òª½çÃæºÍÂß¼­Éè¼Æ ===============
+# ============== è¿™é‡Œæ˜¯è½¯ä»¶çš„ä¸»è¦ç•Œé¢å’Œé€»è¾‘è®¾è®¡ ===============
 import wx
 
 def create(parent):
     return Frame1(parent)
 
-# ¶¨ÒåËùÓÃµ½µÄËùÓĞµÄ¿Ø¼şµÄid
+# å®šä¹‰æ‰€ç”¨åˆ°çš„æ‰€æœ‰çš„æ§ä»¶çš„id
 [wxID_FRAME1, wxID_FRAME1BUTTON1, wxID_FRAME1BUTTON2, wxID_FRAME1BUTTON3, 
  wxID_FRAME1BUTTON4, wxID_FRAME1BUTTON5, wxID_FRAME1BUTTON6, 
  wxID_FRAME1BUTTON7, wxID_FRAME1BUTTON8, wxID_FRAME1BUTTON9, 
@@ -57,11 +57,11 @@ def create(parent):
 ] = [wx.NewId() for _init_ctrls in range(135)]
 
 
-# Ö÷´°¿ÚµÄÀàÃèÊö
+# ä¸»çª—å£çš„ç±»æè¿°
 class Frame1(wx.Frame):
 
 
-    # ÒÔÏÂ¼¸¸öSizerÊÇ²¼¾Ö¹ÜÀíÆ÷£¬ÓÃÓÚ·ÅÖÃÁĞ±í¿ò£¬¶¼ÊÇÒ»Ğ©´´½¨²ÎÊı
+    # ä»¥ä¸‹å‡ ä¸ªSizeræ˜¯å¸ƒå±€ç®¡ç†å™¨ï¼Œç”¨äºæ”¾ç½®åˆ—è¡¨æ¡†ï¼Œéƒ½æ˜¯ä¸€äº›åˆ›å»ºå‚æ•°
     
     def _init_coll_gridSizer4_Items(self, parent):
         # generated method, don't edit
@@ -108,7 +108,7 @@ class Frame1(wx.Frame):
         parent.AddSizer(self.gridSizer4, 0, border=0, flag=wx.EXPAND)
 
 
-    # notebook¿Ø¼şÓÃ»§·ÖÒ³ÏÔÊ¾£¬ÏÂÃæÊÇÕë¶Ô¸÷¸öÒ³ÃæµÄ³õÊ¼»¯ÉèÖÃ
+    # notebookæ§ä»¶ç”¨æˆ·åˆ†é¡µæ˜¾ç¤ºï¼Œä¸‹é¢æ˜¯é’ˆå¯¹å„ä¸ªé¡µé¢çš„åˆå§‹åŒ–è®¾ç½®
     def _init_coll_notebook1_Pages(self, parent):
         # generated method, don't edit
 
@@ -136,7 +136,7 @@ class Frame1(wx.Frame):
         parent.AddPage(imageId=-1, page=self.panel12, select=False,
               text=u'Code Analysis')
 
-    # sizer²¼¾Ö¹ÜÀíµÄ³õÊ¼»¯ boxSizer ÄÚ°üº¬5¸ö gridSizer
+    # sizerå¸ƒå±€ç®¡ç†çš„åˆå§‹åŒ– boxSizer å†…åŒ…å«5ä¸ª gridSizer
     def _init_sizers(self):
         # generated method, don't edit
         self.boxSizer1 = wx.BoxSizer(orient=wx.VERTICAL)
@@ -161,11 +161,11 @@ class Frame1(wx.Frame):
         self.panel2.SetSizer(self.boxSizer1)
 
 
-    # ÆäËûÆÕÍ¨¿Ø¼şµÄ³õÊ¼»¯´´½¨
+    # å…¶ä»–æ™®é€šæ§ä»¶çš„åˆå§‹åŒ–åˆ›å»º
     def _init_ctrls(self, prnt):
         # generated method, don't edit
         
-        # Ö÷´°ÌåµÄ´´½¨²ÎÊı
+        # ä¸»çª—ä½“çš„åˆ›å»ºå‚æ•°
         wx.Frame.__init__(self, id=wxID_FRAME1, name='', parent=prnt,
               pos=wx.Point(500, 105), size=wx.Size(896, 704),
               style=wx.DEFAULT_FRAME_STYLE, title=u'A2C C to RTL Synthesls')
@@ -174,7 +174,7 @@ class Frame1(wx.Frame):
         self.SetToolTipString(u'')
         self.SetHelpText(u'')
 
-        # µÚ1Ò³
+        # ç¬¬1é¡µ
         self.notebook1 = wx.Notebook(id=wxID_FRAME1NOTEBOOK1, name='notebook1',
               parent=self, pos=wx.Point(0, 0), size=wx.Size(880, 666), style=0)
         self.notebook1.SetToolTipString(u'')
@@ -184,30 +184,30 @@ class Frame1(wx.Frame):
               style=wx.TAB_TRAVERSAL)
         self.panel1.SetToolTipString(u'')
 
-        # µÚ2Ò³
+        # ç¬¬2é¡µ
         self.panel2 = wx.Panel(id=wxID_FRAME1PANEL2, name='panel2',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel2.SetToolTipString(u'')
 
-        # µÚ3Ò³
+        # ç¬¬3é¡µ
         self.panel3 = wx.Panel(id=wxID_FRAME1PANEL3, name='panel3',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel3.SetToolTipString(u'')
 
-        # µÚ4Ò³
+        # ç¬¬4é¡µ
         self.panel4 = wx.Panel(id=wxID_FRAME1PANEL4, name='panel4',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
         self.panel4.SetToolTipString(u'')
 
-        # ÒÔÏÂÊÇµÚ1-4Ò³ÖĞÊ¹ÓÃµÄ¿Ø¼şÏêÏ¸²¼¾Ö
-        # Ö÷ÒªÓĞÒÔÏÂ¼¸ÖÖÀàĞÍ
-        # StaticText ÓÃ»§ÏÔÊ¾¾²Ì¬µÄÎÄ±¾±êÇ© ËµÃ÷ÎÄ×Ö
-        # TextCtrl   ÎÄ±¾ÊäÈë¿ò ¿ÉÌîĞ´ÄÚÈİÎÄ×Ö
-        # CheckBox   ¹´Ñ¡¿ò
-        # Button     °´Å¥
+        # ä»¥ä¸‹æ˜¯ç¬¬1-4é¡µä¸­ä½¿ç”¨çš„æ§ä»¶è¯¦ç»†å¸ƒå±€
+        # ä¸»è¦æœ‰ä»¥ä¸‹å‡ ç§ç±»å‹
+        # StaticText ç”¨æˆ·æ˜¾ç¤ºé™æ€çš„æ–‡æœ¬æ ‡ç­¾ è¯´æ˜æ–‡å­—
+        # TextCtrl   æ–‡æœ¬è¾“å…¥æ¡† å¯å¡«å†™å†…å®¹æ–‡å­—
+        # CheckBox   å‹¾é€‰æ¡†
+        # Button     æŒ‰é’®
         self.c_source_code_label = wx.StaticText(id=wxID_FRAME1C_SOURCE_CODE_LABEL,
               label=u'C Source Code', name=u'c_source_code_label',
               parent=self.panel1, pos=wx.Point(64, 64), size=wx.Size(72, 13),
@@ -468,37 +468,37 @@ class Frame1(wx.Frame):
         self.button4.Bind(wx.EVT_BUTTON, self.OnButton4Button,
               id=wxID_FRAME1BUTTON4)
 
-        # µÚ5Ò³
+        # ç¬¬5é¡µ
         self.panel5 = wx.Panel(id=wxID_FRAME1PANEL5, name='panel5',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
-        # µÚ6Ò³
+        # ç¬¬6é¡µ
         self.panel6 = wx.Panel(id=wxID_FRAME1PANEL6, name='panel6',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
-        # µÚ7Ò³
+        # ç¬¬7é¡µ
         self.panel7 = wx.Panel(id=wxID_FRAME1PANEL7, name='panel7',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
-        # µÚ8Ò³
+        # ç¬¬8é¡µ
         self.panel8 = wx.Panel(id=wxID_FRAME1PANEL8, name='panel8',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
-        # µÚ9Ò³
+        # ç¬¬9é¡µ
         self.panel9 = wx.Panel(id=wxID_FRAME1PANEL9, name='panel9',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
-        # µÚ10Ò³
+        # ç¬¬10é¡µ
         self.panel10 = wx.Panel(id=wxID_FRAME1PANEL10, name='panel10',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
 
-        # µÚ11Ò³
+        # ç¬¬11é¡µ
         self.panel11 = wx.Panel(id=wxID_FRAME1PANEL11, name='panel11',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
@@ -958,7 +958,7 @@ class Frame1(wx.Frame):
         self.staticText58.SetFont(wx.Font(12, wx.SWISS, wx.NORMAL, wx.BOLD,
               False, u'Tahoma'))
 
-        # µÚ12Ò³
+        # ç¬¬12é¡µ
         self.panel12 = wx.Panel(id=wxID_FRAME1PANEL12, name='panel12',
               parent=self.notebook1, pos=wx.Point(0, 0), size=wx.Size(872, 640),
               style=wx.TAB_TRAVERSAL)
@@ -980,12 +980,12 @@ class Frame1(wx.Frame):
         self._init_sizers()
 
     def __init__(self, parent):
-        # µ÷ÓÃ»æÖÆ½çÃæ·½·¨
+        # è°ƒç”¨ç»˜åˆ¶ç•Œé¢æ–¹æ³•
         self._init_ctrls(parent)
 
 
     def set_selected(self, file_text):
-        # ÒòÎªÓĞ¶à¸ö°´Å¥Ê½Ñ¡ÔñÎÄ¼ş¹¦ÄÜ£¬ËùÒÔ°ÑÑ¡ÔñÎÄ¼şµÄ²Ù×÷µ¥¶ÀĞ´³ÉÒ»¸öº¯Êı
+        # å› ä¸ºæœ‰å¤šä¸ªæŒ‰é’®å¼é€‰æ‹©æ–‡ä»¶åŠŸèƒ½ï¼Œæ‰€ä»¥æŠŠé€‰æ‹©æ–‡ä»¶çš„æ“ä½œå•ç‹¬å†™æˆä¸€ä¸ªå‡½æ•°
         path = wx.FileSelector("Open")
         if path:
             #path = path.replace("\\", "/")
@@ -993,43 +993,46 @@ class Frame1(wx.Frame):
             file_text.SetValue(path)
             
     
-    # ¼ì²â×Ö·û´®¡¢ÕûÊı¡¢Ğ¡ÊıÊäÈëÀàĞÍ
-    # Ê×ÏÈ¶¨ÒåÈıÖÖÀàĞÍËùÄÜ½ÓÊÜµÄ×Ö·û¼¯ºÏ
+    # æ£€æµ‹å­—ç¬¦ä¸²ã€æ•´æ•°ã€å°æ•°è¾“å…¥ç±»å‹
+    # é¦–å…ˆå®šä¹‰ä¸‰ç§ç±»å‹æ‰€èƒ½æ¥å—çš„å­—ç¬¦é›†åˆ
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ,."
     integers = "0123456789"
     floats = "0123456789."
     
-    # ¼ì²â×Ö·û´®
+    # æ£€æµ‹å­—ç¬¦ä¸²
     def check_string(self, textctrl):
         text = ""
-        # ÔÚÓÃ»§ÊäÈëÊ±½øĞĞ¼ì²â£¬Öğ¸ö¼ì²âÎÄ±¾¿òÖĞµÄ×Ö·ûÊÇ·ñÂú×ãÉè¶¨µÄÀàĞÍ
-        # ²»Âú×ãµÄ»á±»¹ıÂËµô
+        # åœ¨ç”¨æˆ·è¾“å…¥æ—¶è¿›è¡Œæ£€æµ‹ï¼Œé€ä¸ªæ£€æµ‹æ–‡æœ¬æ¡†ä¸­çš„å­—ç¬¦æ˜¯å¦æ»¡è¶³è®¾å®šçš„ç±»å‹
+        # ä¸æ»¡è¶³çš„ä¼šè¢«è¿‡æ»¤æ‰
         for c in textctrl.GetValue():
             if str(c).upper() in self.chars:
                 text += c
         textctrl.SetValue(text)
+        textctrl.SetSelection(100, 100)
     
-    # ¼ì²âÕûÊı Ô­ÀíÍ¬ÉÏ
+    # æ£€æµ‹æ•´æ•° åŸç†åŒä¸Š
     def check_integer(self, textctrl):
         text = ""
         for c in textctrl.GetValue():
             if str(c) in self.integers:
                 text += c
         textctrl.SetValue(text)
+        textctrl.SetSelection(100, 100)
     
-    # ¼ì²âĞ¡Êı Ô­ÀíÍ¬ÉÏ
+    # æ£€æµ‹å°æ•° åŸç†åŒä¸Š
     def check_float(self, textctrl):
         text = ""
         for c in textctrl.GetValue():
             if str(c) in self.floats:
                 text += c
         textctrl.SetValue(text)
+        textctrl.SetSelection(100, 100)
         
             
             
             
     def OnWork_btnButton(self, event):
-        # Ñ¡ÔñWorkÄ¿Â¼°´Å¥£¬×¢ÒâÕâÀïÑ¡ÔñµÄÊÇÄ¿Â¼¶ø²»ÊÇÎÄ¼ş
+        # é€‰æ‹©Workç›®å½•æŒ‰é’®ï¼Œæ³¨æ„è¿™é‡Œé€‰æ‹©çš„æ˜¯ç›®å½•è€Œä¸æ˜¯æ–‡ä»¶
         dir = wx.DirSelector()
         dir = dir.replace("\\", "/")
         dirname = dir.split("/")[-1]
@@ -1038,78 +1041,78 @@ class Frame1(wx.Frame):
         
 
     def OnGo_btnButton(self, event):
-        # Go°´Å¥ ÔİÊ±Ã»ÓĞ¹¦ÄÜ
+        # GoæŒ‰é’® æš‚æ—¶æ²¡æœ‰åŠŸèƒ½
         event.Skip()
 
     def OnExit_btnButton(self, event):
-        # ÍË³ö°´Å¥
+        # é€€å‡ºæŒ‰é’®
         self.Destroy()
         event.Skip()
 
 
     def set_list(self, listbox):
-        # CodesÒ³ÃæµÄOpen°´Å¥£¬ÒòÎªÈı¸ö°´Å¥µÄÂß¼­ÀàËÆ£¬ËùÒÔ¿ÉÒÔ¼ò»¯ºÏ²¢
+        # Codesé¡µé¢çš„OpenæŒ‰é’®ï¼Œå› ä¸ºä¸‰ä¸ªæŒ‰é’®çš„é€»è¾‘ç±»ä¼¼ï¼Œæ‰€ä»¥å¯ä»¥ç®€åŒ–åˆå¹¶
         path = wx.FileSelector("Open")
-        # ¶ÁÈ¡ÎÄ¼ş
+        # è¯»å–æ–‡ä»¶
         lines = open(path).readlines()
-        # Çå¿ÕÔ­À´µÄÊı¾İ
+        # æ¸…ç©ºåŸæ¥çš„æ•°æ®
         listbox.Clear()
         for line in lines:
-            # ÖğĞĞ½«Êı¾İÌí¼Óµ½ÁĞ±íÖĞ
+            # é€è¡Œå°†æ•°æ®æ·»åŠ åˆ°åˆ—è¡¨ä¸­
             line = line.strip()
             listbox.Append(line)
 
 
     def OnButton1Button(self, event):
-        # µÚÒ»¸öOpen°´Å¥
+        # ç¬¬ä¸€ä¸ªOpenæŒ‰é’®
         self.set_list(self.listBox1)
         event.Skip()
 
     def OnButton2Button(self, event):
-        # µÚ¶ş¸öOpen°´Å¥
+        # ç¬¬äºŒä¸ªOpenæŒ‰é’®
         self.set_list(self.listBox2)
         event.Skip()
 
     def OnButton3Button(self, event):
-        # µÚÈı¸öOpen°´Å¥
+        # ç¬¬ä¸‰ä¸ªOpenæŒ‰é’®
         self.set_list(self.listBox3)
         event.Skip()
 
     def OnButton4Button(self, event):
-        # Xref Open °´Å¥
+        # Xref Open æŒ‰é’®
         self.xref1 = []
         self.xref2 = []
         self.xref3 = []
-        # xref1/2/3 ÓÃÓÚ´æ·Å¶ÔÓ¦µÄ3ÁĞxrefĞÅÏ¢
+        # xref1/2/3 ç”¨äºå­˜æ”¾å¯¹åº”çš„3åˆ—xrefä¿¡æ¯
         path = wx.FileSelector("Open")
         lines = open(path).readlines()
-        # ¶ÁÈ¡Ã¿Ò»ĞĞ
+        # è¯»å–æ¯ä¸€è¡Œ
         for line in lines:
             line = line.strip()
-            # °ÑÃ¿ĞĞÍ¨¹ı¿Õ¸ñ·Ö³É3¸öÔªËØ£¬·Ö±ğ¶ÔÓ¦µÚ1¡¢2¡¢3ÁĞ
+            # æŠŠæ¯è¡Œé€šè¿‡ç©ºæ ¼åˆ†æˆ3ä¸ªå…ƒç´ ï¼Œåˆ†åˆ«å¯¹åº”ç¬¬1ã€2ã€3åˆ—
             x1, x2, x3 = line.split()
-            # °Ñ¶ÔÓ¦ÔªËØÌí¼Óµ½ÁĞ±íÖĞ
+            # æŠŠå¯¹åº”å…ƒç´ æ·»åŠ åˆ°åˆ—è¡¨ä¸­
             self.xref1.append(int(x1))
             self.xref2.append(int(x2))
             self.xref3.append(int(x3))
         event.Skip()
 
     def OnListBox1Listbox(self, event):
-        # µã»÷ÁĞ±í¿ò1Ê±´¥·¢
+        # ç‚¹å‡»åˆ—è¡¨æ¡†1æ—¶è§¦å‘
         self.listBox2.Select(-1)
         self.listBox3.Select(-1)
-        # »ñÈ¡µ±Ç°µã»÷µÄÊÇµÚ¼¸ĞĞ
+        # è·å–å½“å‰ç‚¹å‡»çš„æ˜¯ç¬¬å‡ è¡Œ
         select_num = self.listBox1.GetSelection()
-        # ²é³ö¸ÄĞĞ´ú±íµÄÊı×Ö³öÏÖÔÚxref1ÖĞµÄµÚ¼¸¸öÎ»ÖÃ
+        # æŸ¥å‡ºæ”¹è¡Œä»£è¡¨çš„æ•°å­—å‡ºç°åœ¨xref1ä¸­çš„ç¬¬å‡ ä¸ªä½ç½®
         index = self.xref1.index(select_num)
-        # xref2ÖĞ¶ÔÓ¦Õâ¸öÎ»ÖÃµÄÊı×Ö±ãÊÇxref2Ó¦¸ÃÏÔÊ¾µÄĞĞºÅ
+        # xref2ä¸­å¯¹åº”è¿™ä¸ªä½ç½®çš„æ•°å­—ä¾¿æ˜¯xref2åº”è¯¥æ˜¾ç¤ºçš„è¡Œå·
         self.listBox2.Select(self.xref2[index])
-        # Í¬ÉÏ
+        # åŒä¸Š
         self.listBox3.Select(self.xref3[index])
         event.Skip()
 
     def OnListBox2Listbox(self, event):
-        # µã»÷ÁĞ±í¿ò2Ê±´¥·¢ Âß¼­Í¬ÉÏ
+        # ç‚¹å‡»åˆ—è¡¨æ¡†2æ—¶è§¦å‘ é€»è¾‘åŒä¸Š
         self.listBox1.Select(-1)
         self.listBox3.Select(-1)
         select_num = self.listBox2.GetSelection()
@@ -1119,7 +1122,7 @@ class Frame1(wx.Frame):
         event.Skip()
 
     def OnListBox3Listbox(self, event):
-        # µã»÷ÁĞ±í¿ò3Ê±´¥·¢ Âß¼­Í¬ÉÏ
+        # ç‚¹å‡»åˆ—è¡¨æ¡†3æ—¶è§¦å‘ é€»è¾‘åŒä¸Š
         self.listBox1.Select(-1)
         self.listBox2.Select(-1)
         select_num = self.listBox3.GetSelection()
@@ -1130,23 +1133,23 @@ class Frame1(wx.Frame):
 
 
     def OnC_cource_code_btnButton(self, event):
-        # Ñ¡ÔñÎÄ¼ş
+        # é€‰æ‹©æ–‡ä»¶
         self.set_selected(self.c_source_code_text)
         event.Skip()
 
     def OnC_testbench_btnButton(self, event):
-        # Ñ¡ÔñÎÄ¼ş
+        # é€‰æ‹©æ–‡ä»¶
         self.set_selected(self.c_testbench_text)
         event.Skip()
 
 
     def OnLlvm_build_path_btnButton(self, event):
-        # Ñ¡ÔñÎÄ¼ş
+        # é€‰æ‹©æ–‡ä»¶
         self.set_selected(self.llvm_build_path_text)
         event.Skip()
 
 
-    # ÏÂÃæÊÇÕë¶Ô¸÷¸öÒª¼ì²âÊäÈëÀàĞÍµÄÎÄ±¾¿ò£¬½øĞĞÏàÓ¦µÄÊÂ¼ş°ó¶¨
+    # ä¸‹é¢æ˜¯é’ˆå¯¹å„ä¸ªè¦æ£€æµ‹è¾“å…¥ç±»å‹çš„æ–‡æœ¬æ¡†ï¼Œè¿›è¡Œç›¸åº”çš„äº‹ä»¶ç»‘å®š
     
     def OnTextCtrl1KeyUp(self, event):
         self.check_string(self.textCtrl1)
