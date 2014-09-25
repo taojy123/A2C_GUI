@@ -1071,9 +1071,12 @@ class Frame1(wx.Frame):
         lines = open(path).readlines()
         # 清空原来的数据
         listbox.Clear()
+        n = 0
         for line in lines:
             # 逐行将数据添加到列表中
             line = line.strip()
+            n += 1
+            line = "%d:  %s" % (n, line)
             listbox.Append(line)
 
 
